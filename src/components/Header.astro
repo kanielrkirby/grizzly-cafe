@@ -1,0 +1,68 @@
+---
+const pathname = new URL(Astro.request.url).pathname.slice(1);
+---
+
+<header
+    class="fixed font-display top-0 w-full left-0 flex sm:justify-between justify-around p-2"
+>
+    <div
+        class="hover:scale-105 duration-200 transition-all cursor-pointer fill-black text-black dark:fill-white dark:text-white"
+    >
+        Logo
+    </div>
+    <nav class="sm:relative absolute right-0">
+        <ul class="hidden gap-4 sm:flex text-xl">
+            <li>
+                <a class={pathname === "" ? "active" : ""} href="/">Home</a>
+            </li>
+            <li>|</li>
+            <li>
+                <a class={pathname === "menu" ? "active" : ""} href="/menu"
+                    >Menu</a
+                >
+            </li>
+            <li>|</li>
+            <li>
+                <a class={pathname === "about" ? "active" : ""} href="/about"
+                    >About</a
+                >
+            </li>
+        </ul>
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            aria-hidden="true"
+            class="sm:hidden block fill-black dark:fill-white w-20 cursor-pointer hover:scale-105 transition-all duration-200"
+        >
+            <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+        </svg>
+    </nav>
+</header>
+<style>
+    a {
+        @apply relative;
+    }
+
+    a:not(.active) {
+        @apply hover:text-blue-500 hover:underline;
+    }
+
+    a.active:after {
+        position: absolute;
+        content: "";
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: auto;
+        height: 4px;
+        background-color: black;
+        border-radius: 3px;
+    }
+</style>
