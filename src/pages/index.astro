@@ -2,72 +2,196 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout>
-	<main class="w-full h-fit">
-		<div class="flex flex-col w-full gap-32">
-			<img class="w-full" src="" alt="" />
-			<img class="w-full" src="" alt="" />
-			<img class="w-full" src="" alt="" />
+<Layout theme="dark" home>
+	<main class="top-0 w-full h-full font-display text-center">
+		<div class="relative top-0 flex flex-col w-full gap-16">
+			<div class="relative h-[100vh] flex justify-center items-center">
+				<h2 class="z-20 -translate-y-28 flex flex-col gap-4">
+					<span>Bringing the community to life,</span>
+					<span>one dish at a time</span>
+				</h2>
+				<img
+					class="absolute top-0 z-0 w-full h-full object-cover brightness-[40%]"
+					src="/bg-img-1.jpg"
+					alt=""
+				/>
+			</div>
+			<div class="relative w-full h-full">
+				<div
+					class="absolute left-0 right-0 top-0 bottom-0 m-auto h-fit w-[40rem] max-w-[90%] bg-white rounded-md text-black z-10 p-12 flex flex-col gap-16"
+				>
+					<h3 class="text-start">Make your reservation</h3>
+					<form class="flex flex-col gap-8 items-center" action="">
+						<ul class="flex flex-col gap-1 w-full">
+							<li class="w-full">
+								<div
+									class="w-full flex justify-between p-4 bg-orange-50"
+								>
+									<p>For how many?</p>
+									<input
+										class="py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
+										type="number"
+										value="1"
+									/>
+								</div>
+							</li>
+							<li class="w-full">
+								<div
+									class="w-full flex justify-between p-4 bg-orange-100"
+								>
+									<p>Your name?</p>
+									<input
+										class="py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
+										type="text"
+									/>
+								</div>
+							</li>
+							<li class="w-full">
+								<div
+									class="w-full flex justify-between p-4 bg-orange-50"
+								>
+									<p>What time would you prefer?</p>
+									<input
+										class="py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
+										type="text"
+									/>
+								</div>
+							</li>
+							<li class="w-full">
+								<div
+									class="w-full flex justify-between p-4 bg-orange-100"
+								>
+									<p>Your phone number?</p>
+									<input
+										class="py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
+										type="tel"
+									/>
+								</div>
+							</li>
+							<li class="w-full">
+								<div
+									class="w-full flex justify-between p-4 bg-orange-50"
+								>
+									<p>Your email?</p>
+									<input
+										class="py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
+										type="email"
+									/>
+								</div>
+							</li>
+						</ul>
+						<button
+							type="submit"
+							class="border-[2px] border-black px-2 py-3 rounded-md text-2xl w-fit cursor-pointer hover:scale-105 transition-all duration-200 select-none"
+							>Submit</button
+						>
+					</form>
+					<h3 class="text-end">
+						Or give us a call at (555) 123-4567
+					</h3>
+				</div>
+			</div>
+			<div class="relative h-[100vh] flex justify-center items-center">
+				<h2 class="z-20">Locally-grown ingredients</h2>
+				<img
+					class="absolute top-0 z-0 w-full h-full object-cover brightness-[35%]"
+					src="/bg-img-2.jpg"
+					alt=""
+				/>
+			</div>
+			<div class="relative w-full h-full">
+				<div
+					class="absolute left-0 right-0 top-0 bottom-0 m-auto h-fit w-[40rem] max-w-[90%] bg-white rounded-md text-black z-10 p-12 flex flex-col gap-16"
+				>
+					<h3>Order catering up to a day before</h3>
+					<div
+						class="grid grid-cols-2 grid-rows-2 gap-4 w-full h-full"
+					>
+						<div
+							class="w-full aspect-video bg-black rounded-md relative flex justify-center items-center drop-shadow-md shadow-[#000000f0]"
+						>
+							<img
+								class="absolute w-full h-full object-cover rounded-md"
+								src="tile-img-1.jpg"
+								alt=""
+							/>
+						</div>
+						<div
+							class="w-full aspect-video bg-black rounded-md relative flex justify-center items-center drop-shadow-md shadow-[#000000f0]"
+						>
+							<img
+								class="absolute w-full h-full object-cover rounded-md"
+								src="tile-img-2.jpg"
+								alt=""
+							/>
+						</div>
+						<div
+							class="w-full aspect-video bg-black rounded-md relative flex justify-center items-center drop-shadow-md shadow-[#000000f0]"
+						>
+							<img
+								class="absolute w-full h-full object-cover rounded-md"
+								src="tile-img-3.jpg"
+								alt=""
+							/>
+						</div>
+						<div
+							class="w-full aspect-video bg-orange-50 rounded-md relative flex justify-center items-center drop-shadow-md shadow-[#000000f0]"
+						>
+							<img
+								class="absolute w-full h-full object-cover rounded-md brightness-75"
+								src="tile-img-4.jpg"
+								alt=""
+							/>
+							<div
+								class="bg-orange-200 w-full h-full absolute opacity-50"
+							>
+							</div>
+							<h3
+								class="z-30 [text-shadow:1px_1px_4px_white] flex flex-col gap-4 text-base"
+							>
+								<span> Give us a call!</span>
+								<span> (555) 123-4567</span>
+							</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="relative h-[100vh] flex justify-center items-center">
+				<h2 class="z-20 flex-col flex gap-4">
+					<span>A delicious spin</span>
+					<span>on your favorite meals</span>
+				</h2>
+				<img
+					class="absolute top-0 z-0 w-full h-full object-cover brightness-[35%]"
+					src="/bg-img-3.jpg"
+					alt=""
+				/>
+			</div>
 		</div>
 		<div class="flex flex-col z-10 items-center">
 			<div></div>
-			<div></div>
 		</div>
-		<h2>Bringing the community to life, one dish at a time</h2>
-		<div>
-			<h3>Make your reservation</h3>
-			<ul class="flex flex-col gap-2">
-				<li>
-					<div class="flex justify-between">
-						<p>For how many?</p>
-						<input type="number" value="1" />
-					</div>
-				</li>
-				<li>
-					<div class="flex justify-between">
-						<p>Your name?</p>
-						<input type="text" />
-					</div>
-				</li>
-				<li>
-					<div class="flex justify-between">
-						<p>What time would you prefer?</p>
-						<input type="text" />
-					</div>
-				</li>
-				<li>
-					<div class="flex justify-between">
-						<p>Your phone number?</p>
-						<input type="tel" />
-					</div>
-				</li>
-				<li>
-					<div class="flex justify-between">
-						<p>Your email?</p>
-						<input type="email" />
-					</div>
-				</li>
-			</ul>
-			<h3>Or give us a call at (555) 123-4567</h3>
-		</div>
-		<h2>Locally-grown ingredients</h2>
-		<div>
-			<h3>Order catering up to just a day before</h3>
-			<div class="grid grid-cols-2 grid-rows-2">
-				<div class="[background-image:url('/img.png')]">
-					<h3>1</h3>
-				</div>
-				<div class="[background-image:url('/img.png')]">
-					<h3>2</h3>
-				</div>
-				<div class="[background-image:url('/img.png')]">
-					<h3>3</h3>
-				</div>
-				<div class="[background-image:url('/img.png')]">
-					<h3>Give us a call!</h3>
-				</div>
-			</div>
-		</div>
-		<h2>A delicious spin on your favorite meals</h2>
+		<div></div>
 	</main>
 </Layout>
+
+<style>
+	h2 {
+		@apply text-4xl !important;
+	}
+	h3 {
+		@apply text-2xl !important;
+	}
+	h4 {
+		@apply text-xl !important;
+	}
+	p {
+		@apply text-base !important;
+	}
+	p {
+		@apply whitespace-nowrap;
+	}
+	img {
+		@apply select-none;
+	}
+</style>

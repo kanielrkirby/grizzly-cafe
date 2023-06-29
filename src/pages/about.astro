@@ -2,8 +2,45 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Our Mission">
-    <main>
-        <h1>Our Mission</h1>
+<Layout title="Our Mission" theme="dark" home>
+    <main class="h-[100vh] relative flex items-center">
+        <img
+            src="/bg-img-4.jpg"
+            alt=""
+            class="w-full h-full absolute object-cover brightness-[35%] flip select-none"
+        />
+        <div class="w-1/2 flex flex-col gap-16 p-24">
+            <h1 class="text-4xl z-10 font-display">Our Mission</h1>
+            <div class="flex flex-col gap-8">
+                <p>
+                    We take pride in offering a menu that combines the familiar
+                    flavors of classic dishes with a modern twist. Our culinary
+                    team works diligently to create innovative and flavorful
+                    dishes that showcase the beauty of sustainable ingredients.
+                    Whether it's our eco-friendly bruschetta with a burst of
+                    fresh tomatoes and basil, our lentil and quinoa bowl packed
+                    with nutritious goodness, or our sustainable fish tacos with
+                    a zesty slaw, each dish is carefully crafted to provide a
+                    memorable dining experience.
+                </p>
+                <p>
+                    Our mission extends beyond the walls of our restaurant. We
+                    actively engage with the community through partnerships,
+                    events, and initiatives that promote sustainability and
+                    community involvement. We believe that by coming together,
+                    we can create a positive impact on the environment and
+                    inspire others to make eco-conscious choices.
+                </p>
+            </div>
+        </div>
     </main>
 </Layout>
+
+<style>
+    p {
+        @apply opacity-70;
+    }
+    .flip {
+        transform: rotateY(180deg);
+    }
+</style>

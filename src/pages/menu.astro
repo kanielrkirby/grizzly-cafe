@@ -3,7 +3,173 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Menu">
-    <main>
-        <h1></h1>
+    <main
+        class="overflow-y-hidden w-full flex justify-around text-white gap-4 p-4"
+    >
+        <div class="bg-black rounded-lg overflow-hidden">
+            <h1
+                class="relative p-8 text-center [background-image:url('/texture-img-1.jpg')] bg-top"
+            >
+                <span class="z-10 relative">Our specialties</span>
+                <div
+                    class="bg-black w-full h-full absolute opacity-50 left-0 top-0"
+                >
+                </div>
+            </h1>
+            <div class="px-12 py-8 shadow-inner relative">
+                <div
+                    class="[box-shadow:inset_0_1.5rem_3rem_black] absolute w-full h-full left-0 top-0 z-10"
+                >
+                </div>
+                <img
+                    src="/bg-img-1.jpg"
+                    alt=""
+                    class="top-0 left-0 w-full h-full absolute object-cover opacity-30"
+                />
+                <ul class="flex flex-col gap-12 relative z-10">
+                    <li>
+                        <div class="flex flex-col gap-4">
+                            <h2>Eco-Friendly Bruschetta</h2>
+                            <p>
+                                Grilled bread topped with a mix of fresh
+                                tomatoes, garlic, and basil, drizzled with a
+                                light balsamic reduction.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex flex-col gap-4">
+                            <h2>Sustainable Salad</h2>
+                            <p>
+                                A mix of seasonal greens, local vegetables, and
+                                a light, flavorful dressing made from scratch.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex flex-col gap-4">
+                            <h2>Lentil and Quinoa Bowl</h2>
+                            <p>
+                                A hearty and nutritious dish featuring a blend
+                                of lentils, quinoa, roasted vegetables, and a
+                                creative sauce.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex flex-col gap-4">
+                            <h2>Roasted Chicken with a Twist</h2>
+                            <p>
+                                A modern take on a classic dish, featuring
+                                locally sourced chicken, a unique herb rub, and
+                                a side of seasonal roasted vegetables.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex flex-col gap-4">
+                            <h2>Vegetarian Stir-Fry</h2>
+                            <p>
+                                A light and flavorful dish made with a variety
+                                of seasonal vegetables, served over brown rice
+                                or quinoa.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bg-black rounded-lg overflow-hidden">
+            <h1
+                class="relative p-8 text-center [background-image:url('/texture-img-1.jpg')] bg-bottom"
+            >
+                <span class="z-10 relative">Recommended</span>
+                <div
+                    class="bg-black w-full h-full absolute opacity-60 left-0 top-0"
+                >
+                </div>
+            </h1>
+            <div class="px-12 py-8 shadow-inner relative">
+                <div
+                    class="[box-shadow:inset_0_1.5rem_3rem_black] absolute w-full h-full left-0 top-0 z-10"
+                >
+                </div>
+                <img
+                    src="/bg-img-1.jpg"
+                    alt=""
+                    class="top-0 left-0 w-full h-full absolute object-cover opacity-30"
+                />
+                <ul class="flex flex-col gap-12 relative z-10">
+                    <li>
+                        <div class="flex flex-col gap-4">
+                            <h2>Eco-Friendly Pizza</h2>
+                            <p>
+                                A pizza made with a whole grain crust, locally
+                                sourced ingredients, and a variety of creative
+                                toppings.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex flex-col gap-4">
+                            <h2>Sustainable Fish Tacos</h2>
+                            <p>
+                                Lightly fried fish served in a corn tortilla,
+                                topped with a fresh, eco-conscious slaw and a
+                                drizzle of sustainable aioli.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex flex-col gap-4">
+                            <h2>Grilled Sustainable Steak</h2>
+                            <p>
+                                A locally sourced steak, grilled to perfection,
+                                served with a side of seasonal roasted
+                                vegetables.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex flex-col gap-4">
+                            <h2>Hearty Vegetable Stew</h2>
+                            <p>
+                                A comforting and nutritious stew made with a
+                                variety of seasonal vegetables, served with a
+                                side of crusty bread.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex flex-col gap-4">
+                            <h2>Desert Duo</h2>
+                            <p>
+                                A plate featuring a combination of locally made,
+                                eco-conscious treats, such as a small scoop of
+                                ice cream and a piece of fruit pie.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </main>
 </Layout>
+
+<style>
+    h1,
+    h2,
+    h3,
+    h4 {
+        @apply font-display;
+    }
+    h1 {
+        @apply text-4xl !important;
+    }
+    h2 {
+        @apply text-3xl after:content-['"'] before:content-['"'] !important;
+    }
+    p {
+        @apply text-start opacity-70;
+    }
+</style>
