@@ -47,8 +47,8 @@ import Logo from "./Logo.astro";
                     <li>
                         <a
                             class="text-blue-500 [text-shadow:1px_1px_2px_#00000050]"
-                            href="mailto:chat@the-grizzly-cafe.com"
-                            >chat@the-grizzly-cafe.com</a
+                            href={`mailto:chat@${Astro.url.hostname}`}
+                            >chat@{Astro.url.hostname}</a
                         >
                     </li>
                 </ul>

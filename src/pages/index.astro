@@ -25,7 +25,10 @@ import Layout from "../layouts/Layout.astro";
 					<h3 class="max-sm:text-center text-start">
 						Make your reservation
 					</h3>
-					<form class="flex flex-col gap-8 items-center" action="">
+					<form
+						id="emailjs-form-reservation"
+						class="flex flex-col gap-8 items-center"
+					>
 						<ul class="flex flex-col gap-1 w-full">
 							<li class="w-full">
 								<div
@@ -36,6 +39,9 @@ import Layout from "../layouts/Layout.astro";
 										class="py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
 										type="number"
 										value="1"
+										min="1"
+										required
+										name="amount"
 									/>
 								</div>
 							</li>
@@ -47,6 +53,9 @@ import Layout from "../layouts/Layout.astro";
 									<input
 										class="py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
 										type="text"
+										minlength="2"
+										required
+										name="name"
 									/>
 								</div>
 							</li>
@@ -57,7 +66,9 @@ import Layout from "../layouts/Layout.astro";
 									<p>What time would you prefer?</p>
 									<input
 										class="py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
-										type="text"
+										type="time"
+										required
+										name="time"
 									/>
 								</div>
 							</li>
@@ -69,6 +80,8 @@ import Layout from "../layouts/Layout.astro";
 									<input
 										class="py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
 										type="tel"
+										required
+										name="number"
 									/>
 								</div>
 							</li>
@@ -80,6 +93,8 @@ import Layout from "../layouts/Layout.astro";
 									<input
 										class="py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
 										type="email"
+										required
+										name="email"
 									/>
 								</div>
 							</li>
@@ -180,6 +195,36 @@ import Layout from "../layouts/Layout.astro";
 		<div></div>
 	</main>
 </Layout>
+
+<script
+	type="text/javascript"
+	src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+></script>
+<script>
+	emailjs.init(import.meta.env.PUBLIC_EMAILJS_KEY);
+	const form = (document.querySelector(
+		"form#emailjs-form-reservation"
+	) as HTMLFormElement)!;
+	form.onsubmit = (e) => {
+		e.preventDefault();
+		const name = q("name");
+		const amount = q("amount");
+		const time = q("time");
+		const number = q("number");
+		const email = q("email");
+		emailjs.send("service_anka1st", "template_ivus0jk", {
+			name,
+			amount,
+			time,
+			number,
+			email,
+		});
+	};
+	function q(query: string) {
+		return (form.querySelector(`[name=${query}]`) as HTMLInputElement)!
+			.value;
+	}
+</script>
 
 <style>
 	h2 {
