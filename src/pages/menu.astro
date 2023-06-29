@@ -4,7 +4,7 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Menu">
     <main
-        class="overflow-y-hidden w-full flex justify-around text-white gap-4 p-4 max-lg:flex-col"
+        class="overflow-y-hidden w-full flex justify-around text-white gap-4 p-4 max-lg:flex-col max-sm:text-center"
     >
         <div class="bg-black rounded-lg overflow-hidden">
             <h1
@@ -170,6 +170,6 @@ import Layout from "../layouts/Layout.astro";
         @apply text-3xl after:content-['"'] before:content-['"'] !important;
     }
     p {
-        @apply text-start opacity-70;
+        @apply text-start max-sm:text-center opacity-70;
     }
 </style>
