@@ -1,5 +1,6 @@
 ---
 import Logo from "./Logo.astro";
+import Nav from "./Nav.astro";
 export interface Props {
     home?: boolean;
 }
@@ -7,6 +8,7 @@ const { home } = Astro.props;
 const pathname = new URL(Astro.request.url).pathname.slice(1);
 ---
 
+<Nav />
 <header
     class={`z-20 font-display top-0 w-full left-0 flex md:justify-between justify-around px-8 py-4 ${
         home ? "absolute" : "relative"
@@ -44,6 +46,7 @@ const pathname = new URL(Astro.request.url).pathname.slice(1);
         </ul>
         <div
             class="rotate-90 md:hidden block text-5xl pt-8 pr-4 cursor-pointer select-none hover:scale-105 transition-all duration-200"
+            id="nav-card-button"
         >
             |||
         </div>
@@ -65,3 +68,10 @@ const pathname = new URL(Astro.request.url).pathname.slice(1);
         position: absolute;
     }
 </style>
+
+<script>
+    const btn = document.querySelector("#nav-card-button")!;
+    btn.addEventListener("click", () => {
+        document.documentElement.classList.toggle("nav-card-open");
+    });
+</script>
