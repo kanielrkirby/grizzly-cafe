@@ -7,11 +7,11 @@ const { theme } = Astro.props;
 ---
 
 <div
-    class={`w-fit flex sm:flex-row items-center flex-col-reverse gap-4 hover:scale-105 duration-200 transition-all cursor-pointer fill-black text-black dark:fill-white dark:text-white`}
+    class={`w-fit flex md:flex-row items-center flex-col-reverse gap-4 hover:scale-105 duration-200 transition-all cursor-pointer fill-black text-black dark:fill-white dark:text-white`}
 >
     <a
         href="/"
-        class={`sm:text-4xl -m-2 text-3xl ${
+        class={`md:text-4xl -m-2 text-3xl ${
             theme == "dark"
                 ? "text-white"
                 : theme == "light"

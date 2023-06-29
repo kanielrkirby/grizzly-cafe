@@ -4,7 +4,7 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Menu">
     <main
-        class="overflow-y-hidden w-full flex justify-around text-white gap-4 p-4"
+        class="overflow-y-hidden w-full flex justify-around text-white gap-4 p-4 max-lg:flex-col"
     >
         <div class="bg-black rounded-lg overflow-hidden">
             <h1
@@ -89,13 +89,13 @@ import Layout from "../layouts/Layout.astro";
                 >
                 </div>
             </h1>
-            <div class="px-12 py-8 shadow-inner relative">
+            <div class="px-12 py-8 shadow-inner relative h-full">
                 <div
                     class="[box-shadow:inset_0_1.5rem_3rem_black] absolute w-full h-full left-0 top-0 z-10"
                 >
                 </div>
                 <img
-                    src="/bg-img-1.jpg"
+                    src="/bg-img-3.jpg"
                     alt=""
                     class="top-0 left-0 w-full h-full absolute object-cover opacity-30"
                 />
@@ -164,7 +164,7 @@ import Layout from "../layouts/Layout.astro";
         @apply font-display;
     }
     h1 {
-        @apply text-4xl !important;
+        @apply text-2xl !important;
     }
     h2 {
         @apply text-3xl after:content-['"'] before:content-['"'] !important;

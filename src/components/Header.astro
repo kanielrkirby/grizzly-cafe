@@ -8,13 +8,13 @@ const pathname = new URL(Astro.request.url).pathname.slice(1);
 ---
 
 <header
-    class={`z-20 font-display top-0 w-full left-0 flex sm:justify-between justify-around px-8 py-4 ${
+    class={`z-20 font-display top-0 w-full left-0 flex md:justify-between justify-around px-8 py-4 ${
         home ? "absolute" : "relative"
     }`}
 >
     <Logo />
-    <nav class="sm:relative flex items-center absolute right-0">
-        <ul class="hidden gap-4 sm:flex text-xl">
+    <nav class="md:relative flex items-center absolute right-0">
+        <ul class="hidden gap-4 md:flex text-xl">
             <li>
                 <a
                     class={`${
@@ -43,7 +43,7 @@ const pathname = new URL(Astro.request.url).pathname.slice(1);
             </li>
         </ul>
         <div
-            class="rotate-90 sm:hidden block text-5xl pt-8 pr-4 cursor-pointer select-none hover:scale-105 transition-all duration-200"
+            class="rotate-90 md:hidden block text-5xl pt-8 pr-4 cursor-pointer select-none hover:scale-105 transition-all duration-200"
         >
             |||
         </div>
