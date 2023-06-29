@@ -5,11 +5,13 @@ import Logo from "./Logo.astro";
 <footer
     class="w-full bg-white text-black fill-black opacity-80 flex-col items-center flex gap-8"
 >
-    <ul class="flex justify-around text-center w-full p-4">
+    <ul
+        class="grid justify-around text-center w-full p-4 grid-cols-4 grid-rows-1 max-sm:grid-cols-1 max-lg:grid-cols-2 gap-8"
+    >
         <li>
             <div class="flex flex-col gap-2">
                 <h4>Pages</h4>
-                <ul class="flex flex-col gap-2">
+                <ul class="flex flex-col gap-2 max-sm:flex-row justify-center">
                     <li>
                         <a
                             class="text-blue-500 [text-shadow:1px_1px_2px_#00000050]"
@@ -65,7 +67,9 @@ import Logo from "./Logo.astro";
         <li>
             <div class="flex flex-col gap-2">
                 <h4>Socials</h4>
-                <ul class="flex flex-col gap-2 items-center">
+                <ul
+                    class="flex flex-col gap-2 items-center max-lg:flex-row justify-center max-lg:gap-6"
+                >
                     <li>
                         <svg
                             viewBox="0 0 66 66"
