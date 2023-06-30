@@ -1,7 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import bgImg1 from "/src/assets/bg-img-1.jpg";
-import bgImg3 from "/src/assets/bg-img-3.jpg";
+import bgImg1 from "/src/assets/images/bg-img-1.jpg";
+import textureImg1 from "/src/assets/images/texture-img-1.jpg";
+import bgImg3 from "/src/assets/images/bg-img-3.jpg";
+import { Image as Img } from "astro:assets";
 ---
 
 <Layout title="Menu">
@@ -9,9 +11,12 @@ import bgImg3 from "/src/assets/bg-img-3.jpg";
     class="overflow-y-hidden w-full flex justify-around text-white gap-4 p-4 max-lg:flex-col max-sm:text-center"
   >
     <div class="bg-black rounded-lg overflow-hidden">
-      <h1
-        class="relative p-8 text-center [background-image:url('/texture-img-1.jpg')] bg-top"
-      >
+      <h1 class={`relative p-8 text-center bg-top`}>
+        <Img
+          class="absolute w-full h-full left-0 bottom-0 object-cover z-0"
+          src={textureImg1}
+          alt="Image of wooden texture"
+        />
         <span class="z-10 relative">Our specialties</span>
         <div class="bg-black w-full h-full absolute opacity-50 left-0 top-0">
         </div>
@@ -21,8 +26,8 @@ import bgImg3 from "/src/assets/bg-img-3.jpg";
           class="[box-shadow:inset_0_1.5rem_3rem_black] absolute w-full h-full left-0 top-0 z-10"
         >
         </div>
-        <img
-          src={bgImg1.src}
+        <Img
+          src={bgImg1}
           alt=""
           class="top-0 left-0 w-full h-full absolute object-cover opacity-30"
         />
@@ -67,19 +72,19 @@ import bgImg3 from "/src/assets/bg-img-3.jpg";
           <li>
             <div class="flex flex-col gap-4">
               <h2>Vegetarian Stir-Fry</h2>
-              <p>
-                A light and flavorful dish made with a variety of seasonal
-                vegetables, served over brown rice or quinoa.
-              </p>
+              <p>A light and flavorful dish made with a variety of seasonal</p>
             </div>
           </li>
         </ul>
       </div>
     </div>
     <div class="bg-black rounded-lg overflow-hidden">
-      <h1
-        class="relative p-8 text-center [background-image:url('/texture-img-1.jpg')] bg-bottom"
-      >
+      <h1 class={`relative p-8 text-center bg-bottom`}>
+        <Img
+          class="absolute w-full h-full left-0 top-0 object-cover z-0"
+          src={textureImg1}
+          alt="Image of wooden texture"
+        />
         <span class="z-10 relative">Recommended</span>
         <div class="bg-black w-full h-full absolute opacity-60 left-0 top-0">
         </div>
