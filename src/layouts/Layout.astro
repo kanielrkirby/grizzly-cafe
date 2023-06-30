@@ -31,11 +31,17 @@ const { title, theme, home } = Astro.props;
 <style>
   @font-face {
     font-family: "Eagle Lake";
-    src: url("/fonts/Eagle_Lake/EagleLake-Regular.ttf");
+    src: url("/fonts/Eagle_Lake/EagleLake-Regular.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
   }
   @font-face {
     font-family: "Noto Sans";
-    src: url("/fonts/Noto_Sans/NotoSans-Regular.ttf");
+    src: url("/fonts/Noto_Sans/NotoSans-Regular.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
   }
   * {
     @apply font-body text-black dark:text-white;

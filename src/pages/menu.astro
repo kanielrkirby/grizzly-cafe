@@ -1,5 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import bgImg1 from "/src/assets/bg-img-1.jpg";
+import bgImg3 from "/src/assets/bg-img-3.jpg";
 ---
 
 <Layout title="Menu">
@@ -20,7 +22,7 @@ import Layout from "../layouts/Layout.astro";
         >
         </div>
         <img
-          src="/bg-img-1.jpg"
+          src={bgImg1.src}
           alt=""
           class="top-0 left-0 w-full h-full absolute object-cover opacity-30"
         />
@@ -88,7 +90,7 @@ import Layout from "../layouts/Layout.astro";
         >
         </div>
         <img
-          src="/bg-img-3.jpg"
+          src={bgImg3.src}
           alt=""
           class="top-0 left-0 w-full h-full absolute object-cover opacity-30"
         />

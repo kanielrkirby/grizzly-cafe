@@ -1,5 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import bgImg1 from "/src/assets/images/bg-img-1.jpg";
+import bgImg2 from "/src/assets/images/bg-img-2.jpg";
+import bgImg3 from "/src/assets/images/bg-img-3.jpg";
+import tileImg1 from "/src/assets/images/tile-img-1.jpg";
+import tileImg2 from "/src/assets/images/tile-img-2.jpg";
+import tileImg3 from "/src/assets/images/tile-img-3.jpg";
+import tileImg4 from "/src/assets/images/tile-img-4.jpg";
 ---
 
 <Layout theme="dark" home>
@@ -14,7 +21,7 @@ import Layout from "../layouts/Layout.astro";
         </h2>
         <img
           class="absolute top-0 z-0 w-full h-full object-cover brightness-[40%]"
-          src="/bg-img-1.jpg"
+          src={bgImg1.src}
           alt=""
         />
       </div>
@@ -112,7 +119,7 @@ import Layout from "../layouts/Layout.astro";
         <h2 class="z-20">Locally-grown ingredients</h2>
         <img
           class="absolute top-0 z-0 w-full h-full object-cover brightness-[35%]"
-          src="/bg-img-2.jpg"
+          src={bgImg2.src}
           alt=""
         />
       </div>
@@ -129,7 +136,7 @@ import Layout from "../layouts/Layout.astro";
             >
               <img
                 class="absolute w-full h-full object-cover rounded-md"
-                src="tile-img-1.jpg"
+                src={tileImg1.src}
                 alt=""
               />
             </div>
@@ -138,7 +145,7 @@ import Layout from "../layouts/Layout.astro";
             >
               <img
                 class="absolute w-full h-full object-cover rounded-md"
-                src="tile-img-2.jpg"
+                src={tileImg2.src}
                 alt=""
               />
             </div>
@@ -147,7 +154,7 @@ import Layout from "../layouts/Layout.astro";
             >
               <img
                 class="absolute w-full h-full object-cover rounded-md"
-                src="tile-img-3.jpg"
+                src={tileImg3.src}
                 alt=""
               />
             </div>
@@ -156,7 +163,7 @@ import Layout from "../layouts/Layout.astro";
             >
               <img
                 class="absolute w-full h-full object-cover rounded-md brightness-75"
-                src="tile-img-4.jpg"
+                src={tileImg4.src}
                 alt=""
               />
               <div class="bg-orange-200 w-full h-full absolute opacity-50">
@@ -180,7 +187,7 @@ import Layout from "../layouts/Layout.astro";
         </h2>
         <img
           class="absolute top-0 z-0 w-full h-full object-cover brightness-[35%]"
-          src="/bg-img-3.jpg"
+          src={bgImg3.src}
           alt=""
         />
       </div>
