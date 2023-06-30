@@ -3,9 +3,9 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 
 export interface Props {
-	title?: string;
-	theme?: "dark" | "light";
-	home?: boolean;
+  title?: string;
+  theme?: "dark" | "light";
+  home?: boolean;
 }
 
 const { title, theme, home } = Astro.props;
@@ -13,31 +13,31 @@ const { title, theme, home } = Astro.props;
 
 <!DOCTYPE html>
 <html lang="en" class={`bg-orange-100 font-body ${theme ?? "light"}`}>
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title ? title + " | " : ""}Grizzly Cafe</title>
-	</head>
-	<body class="relative">
-		<Header home={home} />
-		<slot />
-		<Footer />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title ? title + " | " : ""}Grizzly Cafe</title>
+  </head>
+  <body class="relative">
+    <Header home={home} />
+    <slot />
+    <Footer />
+  </body>
 </html>
 
 <style>
-	@font-face {
-		font-family: "Eagle Lake";
-		src: url("/fonts/Eagle_Lake/EagleLake-Regular.ttf");
-	}
-	@font-face {
-		font-family: "Noto Sans";
-		src: url("/fonts/Noto_Sans/NotoSans-Regular.ttf");
-	}
-	* {
-		@apply dark:text-white text-black font-body;
-	}
+  @font-face {
+    font-family: "Eagle Lake";
+    src: url("/fonts/Eagle_Lake/EagleLake-Regular.ttf");
+  }
+  @font-face {
+    font-family: "Noto Sans";
+    src: url("/fonts/Noto_Sans/NotoSans-Regular.ttf");
+  }
+  * {
+    @apply font-body text-black dark:text-white;
+  }
 </style>

@@ -3,250 +3,245 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout theme="dark" home>
-	<main class="top-0 w-full h-full font-display text-center">
-		<div class="relative top-0 flex flex-col w-full">
-			<div
-				class="relative h-[100vh] max-sm:h-[125vh] flex justify-center items-center"
-			>
-				<h2 class="z-20 -translate-y-28 flex flex-col gap-4">
-					<span>Bringing the community to life,</span>
-					<span>one dish at a time</span>
-				</h2>
-				<img
-					class="absolute top-0 z-0 w-full h-full object-cover brightness-[40%]"
-					src="/bg-img-1.jpg"
-					alt=""
-				/>
-			</div>
-			<div class="relative w-full h-full py-[10rem]">
-				<div
-					class="absolute left-0 right-0 top-0 bottom-0 m-auto h-fit w-[45rem] max-w-[90%] bg-white rounded-md text-black z-10 p-12 max-sm:px-6 flex flex-col gap-16"
-				>
-					<h3 class="max-sm:text-center text-start">
-						Make your reservation
-					</h3>
-					<form
-						id="emailjs-form-reservation"
-						class="flex flex-col gap-8 items-center"
-					>
-						<ul class="flex flex-col gap-1 w-full">
-							<li class="w-full">
-								<div
-									class="gap-4 w-full flex justify-between p-4 bg-orange-50 max-lg:flex-col"
-								>
-									<p>For how many?</p>
-									<input
-										class="py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
-										type="number"
-										value="1"
-										min="1"
-										required
-										name="amount"
-									/>
-								</div>
-							</li>
-							<li class="w-full">
-								<div
-									class="gap-4 w-full flex justify-between p-4 bg-orange-100 max-lg:flex-col"
-								>
-									<p>Your name?</p>
-									<input
-										class="py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
-										type="text"
-										minlength="2"
-										required
-										name="name"
-									/>
-								</div>
-							</li>
-							<li class="w-full">
-								<div
-									class="gap-4 w-full flex justify-between p-4 bg-orange-50 max-lg:flex-col"
-								>
-									<p>What time would you prefer?</p>
-									<input
-										class="py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
-										type="time"
-										required
-										name="time"
-									/>
-								</div>
-							</li>
-							<li class="w-full">
-								<div
-									class="gap-4 w-full flex justify-between p-4 bg-orange-100 max-lg:flex-col"
-								>
-									<p>Your phone number?</p>
-									<input
-										class="py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
-										type="tel"
-										required
-										name="number"
-									/>
-								</div>
-							</li>
-							<li class="w-full">
-								<div
-									class="gap-4 w-full flex justify-between p-4 bg-orange-50 max-lg:flex-col"
-								>
-									<p>Your email?</p>
-									<input
-										class="py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
-										type="email"
-										required
-										name="email"
-									/>
-								</div>
-							</li>
-						</ul>
-						<button
-							type="submit"
-							class="border-[2px] border-black px-2 py-3 rounded-md text-2xl w-fit cursor-pointer hover:scale-105 transition-all duration-200 select-none"
-							>Submit</button
-						>
-					</form>
-					<h3 class="max-sm:text-center text-end">
-						Or give us a call at (555) 123-4567
-					</h3>
-				</div>
-			</div>
-			<div class="relative h-[120vh] flex justify-center items-center">
-				<h2 class="z-20">Locally-grown ingredients</h2>
-				<img
-					class="absolute top-0 z-0 w-full h-full object-cover brightness-[35%]"
-					src="/bg-img-2.jpg"
-					alt=""
-				/>
-			</div>
-			<div class="relative w-full h-full py-[10rem]">
-				<div
-					class="absolute left-0 right-0 top-0 bottom-0 m-auto h-fit w-[40rem] max-w-[90%] bg-white rounded-md text-black z-10 p-12 flex flex-col gap-16"
-				>
-					<h3>Order catering up to a day before</h3>
-					<div
-						class="relative grid grid-cols-2 max-sm:grid-cols-1 gap-4 w-full h-full place-items-center"
-					>
-						<div
-							class="w-[20rem] max-w-full aspect-video bg-black rounded-md relative flex justify-center items-center drop-shadow-md shadow-[#000000f0]"
-						>
-							<img
-								class="absolute w-full h-full object-cover rounded-md"
-								src="tile-img-1.jpg"
-								alt=""
-							/>
-						</div>
-						<div
-							class="w-[20rem] max-w-full aspect-video bg-black rounded-md relative flex justify-center items-center drop-shadow-md shadow-[#000000f0]"
-						>
-							<img
-								class="absolute w-full h-full object-cover rounded-md"
-								src="tile-img-2.jpg"
-								alt=""
-							/>
-						</div>
-						<div
-							class="w-[20rem] max-w-full aspect-video bg-black rounded-md relative flex justify-center items-center drop-shadow-md shadow-[#000000f0]"
-						>
-							<img
-								class="absolute w-full h-full object-cover rounded-md"
-								src="tile-img-3.jpg"
-								alt=""
-							/>
-						</div>
-						<div
-							class="w-[20rem] max-w-full aspect-video bg-orange-50 rounded-md relative flex justify-center items-center drop-shadow-md shadow-[#000000f0]"
-						>
-							<img
-								class="absolute w-full h-full object-cover rounded-md brightness-75"
-								src="tile-img-4.jpg"
-								alt=""
-							/>
-							<div
-								class="bg-orange-200 w-full h-full absolute opacity-50"
-							>
-							</div>
-							<div
-								class="z-30 [text-shadow:1px_1px_4px_white] flex flex-col gap-4 md:text-2xl text-base"
-							>
-								<span>Give us a call!</span>
-								<span>(555) 123-4567</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div
-				class="relative h-[100vh] max-sm:h-[185vh] flex justify-center items-center"
-			>
-				<h2 class="z-20 flex-col flex gap-4">
-					<span>A delicious spin</span>
-					<span>on your favorite meals</span>
-				</h2>
-				<img
-					class="absolute top-0 z-0 w-full h-full object-cover brightness-[35%]"
-					src="/bg-img-3.jpg"
-					alt=""
-				/>
-			</div>
-		</div>
-		<div class="flex flex-col z-10 items-center">
-			<div></div>
-		</div>
-		<div></div>
-	</main>
+  <main class="top-0 w-full h-full font-display text-center">
+    <div class="relative top-0 flex flex-col w-full">
+      <div
+        class="relative h-[100vh] max-sm:h-[125vh] flex justify-center items-center"
+      >
+        <h2 class="z-20 -translate-y-28 flex flex-col gap-4">
+          <span>Bringing the community to life,</span>
+          <span>one dish at a time</span>
+        </h2>
+        <img
+          class="absolute top-0 z-0 w-full h-full object-cover brightness-[40%]"
+          src="/bg-img-1.jpg"
+          alt=""
+        />
+      </div>
+      <div class="relative w-full h-full py-[10rem]">
+        <div
+          class="absolute left-0 right-0 top-0 bottom-0 m-auto h-fit w-[45rem] max-w-[90%] bg-white rounded-md text-black z-10 p-12 max-sm:px-6 flex flex-col gap-16"
+        >
+          <h3 class="max-sm:text-center text-start">Make your reservation</h3>
+          <form
+            id="emailjs-form-reservation"
+            class="flex flex-col gap-8 items-center"
+          >
+            <ul class="flex flex-col gap-1 w-full">
+              <li class="w-full">
+                <div
+                  class="gap-4 w-full flex justify-between p-4 bg-orange-50 max-lg:flex-col"
+                >
+                  <p>For how many?</p>
+                  <input
+                    class="py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
+                    type="number"
+                    value="1"
+                    min="1"
+                    required
+                    name="amount"
+                  />
+                </div>
+              </li>
+              <li class="w-full">
+                <div
+                  class="gap-4 w-full flex justify-between p-4 bg-orange-100 max-lg:flex-col"
+                >
+                  <p>Your name?</p>
+                  <input
+                    class="py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
+                    type="text"
+                    minlength="2"
+                    required
+                    name="name"
+                  />
+                </div>
+              </li>
+              <li class="w-full">
+                <div
+                  class="gap-4 w-full flex justify-between p-4 bg-orange-50 max-lg:flex-col"
+                >
+                  <p>What time would you prefer?</p>
+                  <input
+                    class="py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
+                    type="time"
+                    required
+                    name="time"
+                  />
+                </div>
+              </li>
+              <li class="w-full">
+                <div
+                  class="gap-4 w-full flex justify-between p-4 bg-orange-100 max-lg:flex-col"
+                >
+                  <p>Your phone number?</p>
+                  <input
+                    class="py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
+                    type="tel"
+                    required
+                    name="number"
+                  />
+                </div>
+              </li>
+              <li class="w-full">
+                <div
+                  class="gap-4 w-full flex justify-between p-4 bg-orange-50 max-lg:flex-col"
+                >
+                  <p>Your email?</p>
+                  <input
+                    class="py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
+                    type="email"
+                    required
+                    name="email"
+                  />
+                </div>
+              </li>
+            </ul>
+            <button
+              type="submit"
+              class="border-[2px] border-black px-2 py-3 rounded-md text-2xl w-fit cursor-pointer hover:scale-105 transition-all duration-200 select-none"
+              >Submit</button
+            >
+          </form>
+          <h3 class="max-sm:text-center text-end">
+            Or give us a call at (555) 123-4567
+          </h3>
+        </div>
+      </div>
+      <div class="relative h-[120vh] flex justify-center items-center">
+        <h2 class="z-20">Locally-grown ingredients</h2>
+        <img
+          class="absolute top-0 z-0 w-full h-full object-cover brightness-[35%]"
+          src="/bg-img-2.jpg"
+          alt=""
+        />
+      </div>
+      <div class="relative w-full h-full py-[10rem]">
+        <div
+          class="absolute left-0 right-0 top-0 bottom-0 m-auto h-fit w-[40rem] max-w-[90%] bg-white rounded-md text-black z-10 p-12 flex flex-col gap-16"
+        >
+          <h3>Order catering up to a day before</h3>
+          <div
+            class="relative grid grid-cols-2 max-sm:grid-cols-1 gap-4 w-full h-full place-items-center"
+          >
+            <div
+              class="w-[20rem] max-w-full aspect-video bg-black rounded-md relative flex justify-center items-center drop-shadow-md shadow-[#000000f0]"
+            >
+              <img
+                class="absolute w-full h-full object-cover rounded-md"
+                src="tile-img-1.jpg"
+                alt=""
+              />
+            </div>
+            <div
+              class="w-[20rem] max-w-full aspect-video bg-black rounded-md relative flex justify-center items-center drop-shadow-md shadow-[#000000f0]"
+            >
+              <img
+                class="absolute w-full h-full object-cover rounded-md"
+                src="tile-img-2.jpg"
+                alt=""
+              />
+            </div>
+            <div
+              class="w-[20rem] max-w-full aspect-video bg-black rounded-md relative flex justify-center items-center drop-shadow-md shadow-[#000000f0]"
+            >
+              <img
+                class="absolute w-full h-full object-cover rounded-md"
+                src="tile-img-3.jpg"
+                alt=""
+              />
+            </div>
+            <div
+              class="w-[20rem] max-w-full aspect-video bg-orange-50 rounded-md relative flex justify-center items-center drop-shadow-md shadow-[#000000f0]"
+            >
+              <img
+                class="absolute w-full h-full object-cover rounded-md brightness-75"
+                src="tile-img-4.jpg"
+                alt=""
+              />
+              <div class="bg-orange-200 w-full h-full absolute opacity-50">
+              </div>
+              <div
+                class="z-30 [text-shadow:1px_1px_4px_white] flex flex-col gap-4 md:text-2xl text-base"
+              >
+                <span>Give us a call!</span>
+                <span>(555) 123-4567</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="relative h-[100vh] max-sm:h-[185vh] flex justify-center items-center"
+      >
+        <h2 class="z-20 flex-col flex gap-4">
+          <span>A delicious spin</span>
+          <span>on your favorite meals</span>
+        </h2>
+        <img
+          class="absolute top-0 z-0 w-full h-full object-cover brightness-[35%]"
+          src="/bg-img-3.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="flex flex-col z-10 items-center">
+      <div></div>
+    </div>
+    <div></div>
+  </main>
 </Layout>
 
 <script>
-	import emailjs from "@emailjs/browser";
+  import emailjs from "@emailjs/browser";
 
-	emailjs.init(import.meta.env.PUBLIC_EMAILJS_KEY);
+  emailjs.init(import.meta.env.PUBLIC_EMAILJS_KEY);
 
-	const form = (document.querySelector(
-		"form#emailjs-form-reservation"
-	) as HTMLFormElement)!;
+  const form = (document.querySelector(
+    "form#emailjs-form-reservation"
+  ) as HTMLFormElement)!;
 
-	form.onsubmit = send;
+  form.onsubmit = send;
 
-	function send(e: SubmitEvent) {
-		e.preventDefault();
+  function send(e: SubmitEvent) {
+    e.preventDefault();
 
-		const name = getField("name");
-		const amount = getField("amount");
-		const time = getField("time");
-		const number = getField("number");
-		const email = getField("email");
+    const name = getField("name");
+    const amount = getField("amount");
+    const time = getField("time");
+    const number = getField("number");
+    const email = getField("email");
 
-		emailjs.send("service_anka1st", "template_ivus0jk", {
-			name,
-			amount,
-			time,
-			number,
-			email,
-		});
-	}
-	function getField(query: string) {
-		return (form.querySelector(`[name=${query}]`) as HTMLInputElement)!
-			.value;
-	}
+    emailjs.send("service_anka1st", "template_ivus0jk", {
+      name,
+      amount,
+      time,
+      number,
+      email,
+    });
+  }
+  function getField(query: string) {
+    return (form.querySelector(`[name=${query}]`) as HTMLInputElement)!.value;
+  }
 </script>
 
 <style>
-	h2 {
-		@apply lg:text-4xl text-2xl !important;
-	}
-	h3 {
-		@apply text-2xl !important;
-	}
-	h4 {
-		@apply text-xl !important;
-	}
-	p {
-		@apply text-base max-sm:text-sm !important;
-	}
-	p {
-		@apply whitespace-nowrap;
-	}
-	img {
-		@apply select-none;
-	}
+  h2 {
+    @apply text-2xl lg:text-4xl !important;
+  }
+  h3 {
+    @apply text-2xl !important;
+  }
+  h4 {
+    @apply text-xl !important;
+  }
+  p {
+    @apply text-base max-sm:text-sm !important;
+  }
+  p {
+    @apply whitespace-nowrap;
+  }
+  img {
+    @apply select-none;
+  }
 </style>

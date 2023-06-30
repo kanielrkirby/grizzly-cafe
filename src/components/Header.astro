@@ -2,7 +2,7 @@
 import Logo from "./Logo.astro";
 import Nav from "./Nav.astro";
 export interface Props {
-    home?: boolean;
+  home?: boolean;
 }
 const { home } = Astro.props;
 const pathname = new URL(Astro.request.url).pathname.slice(1);
@@ -10,68 +10,68 @@ const pathname = new URL(Astro.request.url).pathname.slice(1);
 
 <Nav />
 <header
-    class={`z-20 font-display top-0 w-full left-0 flex md:justify-between justify-around px-8 py-4 ${
-        home ? "absolute" : "relative"
-    }`}
+  class={`z-20 font-display top-0 w-full left-0 flex md:justify-between justify-around px-8 py-4 ${
+    home ? "absolute" : "relative"
+  }`}
 >
-    <Logo />
-    <nav class="md:relative flex items-center absolute right-0">
-        <ul class="hidden gap-4 md:flex text-xl">
-            <li>
-                <a
-                    class={`${
-                        pathname === "" ? "active" : ""
-                    } after:bg-black dark:after:bg-white`}
-                    href="/">Home</a
-                >
-            </li>
-            <li>|</li>
-            <li>
-                <a
-                    class={`${
-                        pathname === "menu" ? "active" : ""
-                    } after:bg-black dark:after:bg-white`}
-                    href="/menu">Menu</a
-                >
-            </li>
-            <li>|</li>
-            <li>
-                <a
-                    class={`${
-                        pathname === "about" ? "active" : ""
-                    } after:bg-black dark:after:bg-white`}
-                    href="/about">About</a
-                >
-            </li>
-        </ul>
-        <div
-            class="rotate-90 md:hidden block text-5xl pt-8 pr-4 cursor-pointer select-none hover:scale-105 transition-all duration-200"
-            id="nav-card-button"
+  <Logo />
+  <nav class="md:relative flex items-center absolute right-0">
+    <ul class="hidden gap-4 md:flex text-xl">
+      <li>
+        <a
+          class={`${
+            pathname === "" ? "active" : ""
+          } after:bg-black dark:after:bg-white`}
+          href="/">Home</a
         >
-            |||
-        </div>
-    </nav>
+      </li>
+      <li>|</li>
+      <li>
+        <a
+          class={`${
+            pathname === "menu" ? "active" : ""
+          } after:bg-black dark:after:bg-white`}
+          href="/menu">Menu</a
+        >
+      </li>
+      <li>|</li>
+      <li>
+        <a
+          class={`${
+            pathname === "about" ? "active" : ""
+          } after:bg-black dark:after:bg-white`}
+          href="/about">About</a
+        >
+      </li>
+    </ul>
+    <div
+      class="rotate-90 md:hidden block text-5xl pt-8 pr-4 cursor-pointer select-none hover:scale-105 transition-all duration-200"
+      id="nav-card-button"
+    >
+      |||
+    </div>
+  </nav>
 </header>
 <style>
-    a {
-        @apply relative after:absolute after:left-0 after:right-0 after:bottom-0 after:m-auto after:w-0 after:h-1 after:rounded hover:text-blue-500 hover:underline;
-    }
+  a {
+    @apply relative after:absolute after:bottom-0 after:left-0 after:right-0 after:m-auto after:h-1 after:w-0 after:rounded hover:text-blue-500 hover:underline;
+  }
 
-    a.active {
-        @apply after:w-auto;
-    }
+  a.active {
+    @apply after:w-auto;
+  }
 
-    img:after {
-        content: "";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-    }
+  img:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
 </style>
 
 <script>
-    const btn = document.querySelector("#nav-card-button")!;
-    btn.addEventListener("click", () => {
-        document.documentElement.classList.toggle("nav-card-open");
-    });
+  const btn = document.querySelector("#nav-card-button")!;
+  btn.addEventListener("click", () => {
+    document.documentElement.classList.toggle("nav-card-open");
+  });
 </script>
