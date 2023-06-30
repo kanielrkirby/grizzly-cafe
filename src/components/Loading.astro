@@ -3,20 +3,32 @@
     id="loading-screen"
 >
     <div
-        class="rounded-md absolute left-0 right-0 top-0 bottom-0 m-auto animate-spin bg-black w-12 h-12 opacity-80"
+        class="rounded-md absolute left-0 right-0 top-0 bottom-0 m-auto animate-spin bg-black w-12 h-12 flex justify-center items-center"
     >
     </div>
     <div
-        class="rounded-md absolute left-0 right-0 top-0 bottom-0 m-auto animate-spin animate-ping [transform:rotate(25deg)] bg-black w-28 h-28 opacity-50"
+        class="animate-ping flex justify-center items-center absolute left-0 right-0 top-0 bottom-0 m-auto"
     >
+        <div
+            class="rounded-md animate-spin [transform:rotate(25deg)] bg-black w-28 h-28 opacity-50"
+        >
+        </div>
     </div>
     <div
-        class="rounded-md absolute left-0 right-0 top-0 bottom-0 m-auto animate-spin animate-ping [transform:rotate(50deg)] bg-black w-32 h-32 opacity-25"
+        class="animate-ping flex justify-center items-center absolute left-0 right-0 top-0 bottom-0 m-auto"
     >
+        <div
+            class="rounded-md absolute left-0 right-0 top-0 bottom-0 m-auto animate-spin [transform:rotate(50deg)] bg-black w-32 h-32 opacity-25"
+        >
+        </div>
     </div>
     <div
-        class="rounded-md absolute left-0 right-0 top-0 bottom-0 m-auto animate-spin animate-ping [transform:rotate(90deg)] bg-black w-36 h-36 opacity-10"
+        class="animate-ping flex justify-center items-center absolute left-0 right-0 top-0 bottom-0 m-auto"
     >
+        <div
+            class="rounded-md absolute left-0 right-0 top-0 bottom-0 m-auto animate-spin [transform:rotate(90deg)] bg-black w-36 h-36 opacity-10"
+        >
+        </div>
     </div>
 </div>
 
@@ -35,9 +47,9 @@
 <script>
     window.addEventListener("load", (e) => {
         setTimeout(() => {
-            document.documentElement.classList.add("fade");
+            // document.documentElement.classList.add("fade");
             setTimeout(() => {
-                document.documentElement.classList.remove("fade", "loading");
+                // document.documentElement.classList.remove("fade", "loading");
             }, 1000);
         }, 1000);
     });
