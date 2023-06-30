@@ -196,33 +196,33 @@ import Layout from "../layouts/Layout.astro";
 	</main>
 </Layout>
 
-<script
-	type="text/javascript"
-	src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-></script>
 <script>
-	emailjs.init(import.meta.env.PUBLIC_EMAILJS_KEY);
-	const form = (document.querySelector(
-		"form#emailjs-form-reservation"
-	) as HTMLFormElement)!;
-	form.onsubmit = (e) => {
-		e.preventDefault();
-		const name = q("name");
-		const amount = q("amount");
-		const time = q("time");
-		const number = q("number");
-		const email = q("email");
-		emailjs.send("service_anka1st", "template_ivus0jk", {
-			name,
-			amount,
-			time,
-			number,
-			email,
-		});
-	};
-	function q(query: string) {
-		return (form.querySelector(`[name=${query}]`) as HTMLInputElement)!
-			.value;
+	// declare let emailjs: any;
+	import emailjs from "@emailjs/browser";
+	if (emailjs) {
+		emailjs.init(import.meta.env.PUBLIC_EMAILJS_KEY);
+		const form = (document.querySelector(
+			"form#emailjs-form-reservation"
+		) as HTMLFormElement)!;
+		form.onsubmit = (e) => {
+			e.preventDefault();
+			const name = q("name");
+			const amount = q("amount");
+			const time = q("time");
+			const number = q("number");
+			const email = q("email");
+			emailjs.send("service_anka1st", "template_ivus0jk", {
+				name,
+				amount,
+				time,
+				number,
+				email,
+			});
+		};
+		function q(query: string) {
+			return (form.querySelector(`[name=${query}]`) as HTMLInputElement)!
+				.value;
+		}
 	}
 </script>
 
