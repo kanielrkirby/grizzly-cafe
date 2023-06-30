@@ -13,6 +13,7 @@ import { Image as Img } from "astro:assets";
     <div class="bg-black rounded-lg overflow-hidden">
       <h1 class={`relative p-8 text-center bg-top`}>
         <Img
+          loading="lazy"
           class="absolute w-full h-full left-0 bottom-0 object-cover z-0"
           src={textureImg1}
           alt="Image of wooden texture"
@@ -27,6 +28,7 @@ import { Image as Img } from "astro:assets";
         >
         </div>
         <Img
+          loading="lazy"
           src={bgImg1}
           alt=""
           class="top-0 left-0 w-full h-full absolute object-cover opacity-30"
@@ -81,6 +83,7 @@ import { Image as Img } from "astro:assets";
     <div class="bg-black rounded-lg overflow-hidden">
       <h1 class={`relative p-8 text-center bg-bottom`}>
         <Img
+          loading="lazy"
           class="absolute w-full h-full left-0 top-0 object-cover z-0"
           src={textureImg1}
           alt="Image of wooden texture"
@@ -95,6 +98,7 @@ import { Image as Img } from "astro:assets";
         >
         </div>
         <img
+          loading="lazy"
           src={bgImg3.src}
           alt=""
           class="top-0 left-0 w-full h-full absolute object-cover opacity-30"

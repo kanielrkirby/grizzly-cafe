@@ -1,14 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import bgImg4 from "/src/assets/images/bg-img-4.jpg";
+import { Image as Img } from "astro:assets";
 ---
 
 <Layout title="Our Mission" theme="dark" home>
   <main
     class="min-h-[100vh] relative flex items-center max-sm:text-center h-fit"
   >
-    <img
-      src={bgImg4.src}
+    <Img
+      loading="lazy"
+      src={bgImg4}
       alt=""
       class="w-full h-full absolute object-cover brightness-[35%] flip select-none"
     />

@@ -1,0 +1,44 @@
+<div
+    class="fixed bg-white z-[1000] w-full h-full transition-all duration-500"
+    id="loading-screen"
+>
+    <div
+        class="rounded-md absolute left-0 right-0 top-0 bottom-0 m-auto animate-spin bg-black w-12 h-12 opacity-80"
+    >
+    </div>
+    <div
+        class="rounded-md absolute left-0 right-0 top-0 bottom-0 m-auto animate-spin animate-ping [transform:rotate(25deg)] bg-black w-28 h-28 opacity-50"
+    >
+    </div>
+    <div
+        class="rounded-md absolute left-0 right-0 top-0 bottom-0 m-auto animate-spin animate-ping [transform:rotate(50deg)] bg-black w-32 h-32 opacity-25"
+    >
+    </div>
+    <div
+        class="rounded-md absolute left-0 right-0 top-0 bottom-0 m-auto animate-spin animate-ping [transform:rotate(90deg)] bg-black w-36 h-36 opacity-10"
+    >
+    </div>
+</div>
+
+<style>
+    html.loading #loading-screen {
+        @apply block;
+    }
+    html.loading.fade #loading-screen {
+        @apply pointer-events-none opacity-0;
+    }
+    html:not(.loading) #loading-screen {
+        @apply hidden;
+    }
+</style>
+
+<script>
+    window.addEventListener("load", (e) => {
+        setTimeout(() => {
+            document.documentElement.classList.add("fade");
+            setTimeout(() => {
+                document.documentElement.classList.remove("fade", "loading");
+            }, 1000);
+        }, 1000);
+    });
+</script>
