@@ -45,12 +45,13 @@
 </style>
 
 <script>
-    window.addEventListener("load", (e) => {
-        setTimeout(() => {
-            document.documentElement.classList.add("fade");
-            setTimeout(() => {
-                document.documentElement.classList.remove("fade", "loading");
-            }, 1000);
-        }, 1000);
+    const wait = (ms: number) =>
+        new Promise((resolve) => setTimeout(resolve, ms));
+
+    window.addEventListener("load", async (e) => {
+        await wait(400);
+        document.documentElement.classList.add("fade");
+        await wait(500);
+        document.documentElement.classList.remove("fade", "loading");
     });
 </script>
