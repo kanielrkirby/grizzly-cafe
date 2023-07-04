@@ -22,7 +22,8 @@ const pathname = new URL(Astro.request.url).pathname.slice(1);
           class={`${
             pathname === "" ? "active" : ""
           } after:bg-black dark:after:bg-white`}
-          href="/">Home</a
+          href="/"
+          rel="prefetch">Home</a
         >
       </li>
       <li>|</li>
@@ -31,7 +32,8 @@ const pathname = new URL(Astro.request.url).pathname.slice(1);
           class={`${
             pathname === "menu" ? "active" : ""
           } after:bg-black dark:after:bg-white`}
-          href="/menu">Menu</a
+          href="/menu"
+          rel="prefetch">Menu</a
         >
       </li>
       <li>|</li>
@@ -40,7 +42,8 @@ const pathname = new URL(Astro.request.url).pathname.slice(1);
           class={`${
             pathname === "about" ? "active" : ""
           } after:bg-black dark:after:bg-white`}
-          href="/about">About</a
+          href="/about"
+          rel="prefetch">About</a
         >
       </li>
     </ul>
