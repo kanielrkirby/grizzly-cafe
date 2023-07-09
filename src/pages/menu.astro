@@ -16,6 +16,9 @@ import { Image as Img } from "astro:assets";
           loading="lazy"
           class="absolute w-full h-full left-0 bottom-0 object-cover z-0"
           src={textureImg1}
+          width={textureImg1.width}
+          height={textureImg1.height}
+          format={textureImg1.format}
           alt="Image of wooden texture"
         />
         <span class="z-10 relative">Our specialties</span>
@@ -30,6 +33,9 @@ import { Image as Img } from "astro:assets";
         <Img
           loading="lazy"
           src={bgImg1}
+          width={bgImg1.width}
+          height={bgImg1.height}
+          format={bgImg1.format}
           alt=""
           class="top-0 left-0 w-full h-full absolute object-cover opacity-30"
         />
@@ -86,6 +92,9 @@ import { Image as Img } from "astro:assets";
           loading="lazy"
           class="absolute w-full h-full left-0 top-0 object-cover z-0"
           src={textureImg1}
+          width={textureImg1.width}
+          height={textureImg1.height}
+          format={textureImg1.format}
           alt="Image of wooden texture"
         />
         <span class="z-10 relative">Recommended</span>
@@ -97,9 +106,12 @@ import { Image as Img } from "astro:assets";
           class="[box-shadow:inset_0_1.5rem_3rem_black] absolute w-full h-full left-0 top-0 z-10"
         >
         </div>
-        <img
+        <Img
           loading="lazy"
-          src={bgImg3.src}
+          src={bgImg3}
+          width={bgImg3.width}
+          height={bgImg3.height}
+          format={bgImg3.format}
           alt=""
           class="top-0 left-0 w-full h-full absolute object-cover opacity-30"
         />
