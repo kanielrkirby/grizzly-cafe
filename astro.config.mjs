@@ -7,7 +7,14 @@ import prefetch from "@astrojs/prefetch";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), compress(), image(), prefetch()],
+  integrations: [
+    tailwind(),
+    compress(),
+    image({
+      serviceEntryPoint: "@astrojs/image/sharp",
+    }),
+    prefetch(),
+  ],
   experimental: {
     assets: true,
   },
