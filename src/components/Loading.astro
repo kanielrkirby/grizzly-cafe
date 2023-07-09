@@ -45,13 +45,16 @@
 </style>
 
 <script>
+    const loadingScreen = document.querySelector(
+        "#loading-screen"
+    ) as HTMLDivElement;
+
     const wait = (ms: number) =>
         new Promise((resolve) => setTimeout(resolve, ms));
 
     window.addEventListener("load", async (e) => {
-        await wait(400);
         document.documentElement.classList.add("fade");
-        await wait(500);
-        document.documentElement.classList.remove("fade", "loading");
+        loadingScreen.ontransitionend = loadingScreen.ontransitioncancel = () =>
+            document.documentElement.classList.remove("fade", "loading");
     });
 </script>
