@@ -10,12 +10,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/image": "^0.17.1",
+    "@astrojs/image": "^0.17.2",
     "@astrojs/prefetch": "^0.2.3",
     "@astrojs/tailwind": "^4.0.0",
     "@emailjs/browser": "^3.11.0",
     "@prettier/plugin-xml": "^2.2.0",
-    "astro": "^2.7.0",
+    "astro": "^2.7.3",
     "astro-compress": "^1.1.49",
     "netlify-cli": "^15.8.0",
     "prettier": "^2.8.8",

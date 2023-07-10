@@ -10,7 +10,7 @@ const pathname = new URL(Astro.request.url).pathname.slice(1);
 
 <Nav />
 <header
-  class={`z-20 font-display top-0 w-full left-0 flex md:justify-between justify-around px-8 py-4 ${
+  class={`z-20 font-display top-0 w-full left-0 overflow-hidden flex md:justify-between justify-around px-8 py-4 ${
     home ? "absolute" : "relative"
   }`}
 >
