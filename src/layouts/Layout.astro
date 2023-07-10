@@ -6,13 +6,19 @@ import Loading from "../components/Loading.astro";
 export interface Props {
   title?: string;
   home?: boolean;
+  theme?: "light" | "dark";
 }
 
-const { title, home } = Astro.props;
+const { title, home, theme } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="loading bg-orange-100">
+<html
+  lang="en"
+  class={`loading bg-orange-100 ${
+    theme === "dark" ? "text-white" : "text-black"
+  }`}
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -21,9 +27,9 @@ const { title, home } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title ? title + " | " : ""}Grizzly Cafe</title>
   </head>
-  <body>
+  <body class="h-full">
     <Loading />
-    <Header home={home} />
+    <Header home={home} theme={theme} />
     <slot />
     <Footer />
   </body>
@@ -48,5 +54,14 @@ const { title, home } = Astro.props;
   }
   * {
     @apply font-display;
+  }
+  h1 {
+    @apply text-2xl !important;
+  }
+  h2 {
+    @apply text-xl !important;
+  }
+  h3 {
+    @apply text-lg !important;
   }
 </style>

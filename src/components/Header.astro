@@ -3,8 +3,9 @@ import Logo from "./Logo.astro";
 import Nav from "./Nav.astro";
 export interface Props {
   home?: boolean;
+  theme?: "light" | "dark";
 }
-const { home } = Astro.props;
+const { home, theme } = Astro.props;
 const pathname = new URL(Astro.request.url).pathname.slice(1);
 ---
 
@@ -12,9 +13,9 @@ const pathname = new URL(Astro.request.url).pathname.slice(1);
 <header
   class={`z-20 top-0 w-full left-0 overflow-hidden flex md:justify-between justify-around px-8 py-4 ${
     home ? "absolute" : "relative"
-  }`}
+  } ${theme === "dark" ? "text-white fill-white" : "text-black fill-black"}`}
 >
-  <Logo />
+  <Logo theme={theme} />
   <nav class="md:relative flex items-center absolute right-0">
     <ul class="hidden gap-4 md:flex text-xl">
       <li>
