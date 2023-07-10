@@ -10,43 +10,33 @@ import Logo from "./Logo.astro";
   >
     <li>
       <div class="flex flex-col gap-2">
-        <h4>Pages</h4>
+        <h3>Pages</h3>
         <ul class="flex flex-col gap-2 max-sm:flex-row justify-center">
           <li>
-            <a
-              class="text-blue-500 [text-shadow:1px_1px_2px_#00000050]"
-              href="/">Home</a
-            >
+            <a class="text-yellow-900" href="/">Home</a>
           </li>
           <li>
-            <a
-              class="text-blue-500 [text-shadow:1px_1px_2px_#00000050]"
-              href="/about">About</a
-            >
+            <a class="text-yellow-900" href="/about">About</a>
           </li>
           <li>
-            <a
-              class="text-blue-500 [text-shadow:1px_1px_2px_#00000050]"
-              href="/menu">Menu</a
-            >
+            <a class="text-yellow-900" href="/menu">Menu</a>
           </li>
         </ul>
       </div>
     </li>
     <li>
       <div class="flex flex-col gap-2">
-        <h4>Contact</h4>
+        <h3>Contact</h3>
         <ul class="flex flex-col gap-2">
           <li>
-            <a
-              class="text-blue-500 [text-shadow:1px_1px_2px_#00000050]"
-              href="tel:+1(555)123-4567">(555) 123-4567</a
+            <a class="text-yellow-900" href="tel:+1(555)123-4567"
+              >(555) 123-4567</a
             >
           </li>
           <li>1234 Apple St, Carbondale IL</li>
           <li>
             <a
-              class="text-blue-500 [text-shadow:1px_1px_2px_#00000050]"
+              class="text-yellow-900"
               href={`mailto:chat@${Astro.url.hostname}`}
               >chat@{Astro.url.hostname}</a
             >
@@ -56,7 +46,7 @@ import Logo from "./Logo.astro";
     </li>
     <li>
       <div class="flex flex-col gap-2">
-        <h4>Hours</h4>
+        <h3>Hours</h3>
         <ul class="flex flex-col gap-2">
           <li>Monday - Saturday</li>
           <li>11am - 1am</li>
@@ -66,7 +56,7 @@ import Logo from "./Logo.astro";
     </li>
     <li>
       <div class="flex flex-col gap-2">
-        <h4>Socials</h4>
+        <h3>Socials</h3>
         <ul
           class="flex flex-col gap-2 items-center max-lg:flex-row justify-center max-lg:gap-6"
         >
@@ -79,7 +69,7 @@ import Logo from "./Logo.astro";
             >
               <g opacity="0.7" clip-path="url(#clip0_13_151)">
                 <path
-                  d="M23.5933 12.7366C23.5933 12.3252 23.6504 11.4366 23.7647 10.0767C23.8875 8.71391 24.4018 7.28826 25.3246 5.79118C26.2389 4.29981 27.7217 2.95987 29.7844 1.77421C31.8386 0.59426 34.8071 0 38.6812 0H49.595V11.8938H41.6039C40.8125 11.8938 40.0754 12.1909 39.4097 12.7766C38.7497 13.3623 38.4098 13.9194 38.4098 14.4365V21.8362H49.5921C49.475 23.2847 49.3464 24.6932 49.1979 26.0532L48.755 29.6473C48.5779 30.8615 48.3979 31.9872 48.2208 33.0243H38.3298V66H23.5933V33.0214H16.405V21.8362H23.5933V12.7366Z"
+                  d="M23.5933 12.7366C23.5933 12.3252 23.6504 11.4366 23.7647 10.0767C23.8875 8.71391 24.4018 7.28826 25.3246 5.79118C26.2389 4.29981 27.7217 2.95987 29.7844 1.77421C31.8386 0.59426 34.8071 0 38.6812 0h39.595V11.8938h31.6039C40.8125 11.8938 40.0754 12.1909 39.4097 12.7766C38.7497 13.3623 38.4098 13.9194 38.4098 14.4365V21.8362h39.5921C49.475 23.2847 49.3464 24.6932 49.1979 26.0532L48.755 29.6473C48.5779 30.8615 48.3979 31.9872 48.2208 33.0243H38.3298V66H23.5933V33.0214H16.405V21.8362H23.5933V12.7366Z"
                   fill="black"></path>
               </g>
               <defs>
@@ -141,11 +131,7 @@ import Logo from "./Logo.astro";
 </footer>
 
 <style>
-  * {
-    @apply font-display;
-  }
-
-  h4 {
+  h3 {
     @apply text-xl !important;
   }
 

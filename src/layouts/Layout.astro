@@ -5,15 +5,14 @@ import Loading from "../components/Loading.astro";
 
 export interface Props {
   title?: string;
-  theme?: "dark" | "light";
   home?: boolean;
 }
 
-const { title, theme, home } = Astro.props;
+const { title, home } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en" class={`font-body loading bg-orange-100 ${theme ?? "light"}`}>
+<html lang="en" class="loading bg-orange-100">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -22,7 +21,7 @@ const { title, theme, home } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title ? title + " | " : ""}Grizzly Cafe</title>
   </head>
-  <body class="relative">
+  <body>
     <Loading />
     <Header home={home} />
     <slot />
@@ -30,7 +29,7 @@ const { title, theme, home } = Astro.props;
   </body>
 </html>
 
-<style>
+<style is:global>
   @font-face {
     font-family: "Eagle Lake";
     src: url("/src/assets/fonts/Eagle_Lake/EagleLake-Regular.ttf")
@@ -48,6 +47,6 @@ const { title, theme, home } = Astro.props;
     font-display: swap;
   }
   * {
-    @apply font-body text-black dark:text-white;
+    @apply font-display;
   }
 </style>

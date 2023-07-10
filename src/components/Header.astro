@@ -10,7 +10,7 @@ const pathname = new URL(Astro.request.url).pathname.slice(1);
 
 <Nav />
 <header
-  class={`z-20 font-display top-0 w-full left-0 overflow-hidden flex md:justify-between justify-around px-8 py-4 ${
+  class={`z-20 top-0 w-full left-0 overflow-hidden flex md:justify-between justify-around px-8 py-4 ${
     home ? "absolute" : "relative"
   }`}
 >
@@ -48,7 +48,7 @@ const pathname = new URL(Astro.request.url).pathname.slice(1);
       </li>
     </ul>
     <div
-      class="rotate-90 md:hidden block text-5xl pt-8 pr-4 cursor-pointer select-none hover:scale-105 transition-all duration-200"
+      class="rotate-90 md:hidden dark:text-white block text-5xl pt-8 pr-4 cursor-pointer select-none hover:scale-105 transition-all duration-200"
       id="nav-card-button"
     >
       |||

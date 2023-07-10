@@ -10,8 +10,8 @@ import tileImg4 from "/src/assets/images/tile-img-4.jpg";
 import { Picture } from "@astrojs/image/components";
 ---
 
-<Layout theme="dark" home>
-  <main class="top-0 w-full h-full font-display text-center">
+<Layout home>
+  <main class="top-0 w-full h-full text-center">
     <div class="relative top-0 flex flex-col w-full">
       <div
         class="relative h-[100vh] max-sm:h-[125vh] flex justify-center items-center"
@@ -49,7 +49,7 @@ import { Picture } from "@astrojs/image/components";
                   <label for="input-amount">For how many?</label>
                   <input
                     id="input-amount"
-                    class="py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
+                    class="font-body py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
                     type="number"
                     value="1"
                     min="1"
@@ -65,7 +65,7 @@ import { Picture } from "@astrojs/image/components";
                   <label for="input-name">Your name?</label>
                   <input
                     id="input-name"
-                    class="py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
+                    class="font-body py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
                     type="text"
                     minlength="2"
                     required
@@ -80,7 +80,7 @@ import { Picture } from "@astrojs/image/components";
                   <label for="input-time">What time would you prefer?</label>
                   <input
                     id="input-time"
-                    class="py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
+                    class="font-body py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
                     type="time"
                     required
                     name="time"
@@ -94,7 +94,7 @@ import { Picture } from "@astrojs/image/components";
                   <label for="input-number">Your phone number?</label>
                   <input
                     id="input-number"
-                    class="py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
+                    class="font-body py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
                     type="tel"
                     required
                     name="number"
@@ -108,7 +108,7 @@ import { Picture } from "@astrojs/image/components";
                   <label for="input-email">Your email?</label>
                   <input
                     id="input-email"
-                    class="py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
+                    class="font-body py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
                     type="email"
                     required
                     name="email"
@@ -265,8 +265,11 @@ import { Picture } from "@astrojs/image/components";
 </script>
 
 <style>
+  * {
+    @apply font-display;
+  }
   h2 {
-    @apply text-2xl lg:text-4xl !important;
+    @apply text-2xl text-white lg:text-4xl !important;
   }
   h3 {
     @apply text-2xl !important;

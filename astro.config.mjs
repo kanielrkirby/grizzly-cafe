@@ -11,7 +11,6 @@ export default defineConfig({
     image({
       serviceEntryPoint: "@astrojs/image/sharp",
     }),
-    compress(),
   ],
   // experimental: {
   //   assets: true,

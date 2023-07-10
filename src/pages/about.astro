@@ -4,7 +4,7 @@ import Layout from "../layouts/Layout.astro";
 import bgImg4 from "/src/assets/images/bg-img-4.jpg";
 ---
 
-<Layout title="Our Mission" theme="dark" home>
+<Layout title="Our Mission" home>
   <main
     class="min-h-[100vh] relative flex items-center max-sm:text-center h-fit"
   >
@@ -22,9 +22,11 @@ import bgImg4 from "/src/assets/images/bg-img-4.jpg";
     <div
       class="w-full flex flex-col gap-16 max-md:gap-8 p-24 max-sm:p-12 mb-24 top-24 max-sm:top-36 max-sm:mb-36 relative h-fit"
     >
-      <h1 class="text-4xl z-10 font-display">Our Mission</h1>
+      <h1 class="text-4xl z-10">Our Mission</h1>
       <div class="flex flex-col gap-8 max-md:gap-4">
-        <p class="w-1/2 max-lg:w-3/4 max-md:w-5/6 max-sm:w-full">
+        <p
+          class="font-body opacity-70 w-1/2 max-lg:w-3/4 max-md:w-5/6 max-sm:w-full"
+        >
           We take pride in offering a menu that combines the familiar flavors of
           classic dishes with a modern twist. Our culinary team works diligently
           to create innovative and flavorful dishes that showcase the beauty of
@@ -34,7 +36,9 @@ import bgImg4 from "/src/assets/images/bg-img-4.jpg";
           slaw, each dish is carefully crafted to provide a memorable dining
           experience.
         </p>
-        <p class="w-5/6 max-lg:w-11/12 max-md:w-full max-sm:w-full">
+        <p
+          class="font-body opacity-70 w-5/6 max-lg:w-11/12 max-md:w-full max-sm:w-full"
+        >
           Our mission extends beyond the walls of our restaurant. We actively
           engage with the community through partnerships, events, and
           initiatives that promote sustainability and community involvement. We
@@ -45,12 +49,3 @@ import bgImg4 from "/src/assets/images/bg-img-4.jpg";
     </div>
   </main>
 </Layout>
-
-<style>
-  p {
-    @apply opacity-70;
-  }
-  .flip {
-    transform: rotateY(180deg);
-  }
-</style>

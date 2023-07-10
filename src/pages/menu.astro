@@ -12,13 +12,11 @@ import { Picture } from "@astrojs/image/components";
   >
     <div class="bg-black rounded-lg overflow-hidden">
       <h1 class={`relative p-8 text-center bg-top`}>
-        <div class="absolute top-0 z-0 w-full h-full brightness-[40%]">
+        <div class="absolute left-0 top-0 z-0 w-full h-full brightness-[40%]">
           <Picture
             src={textureImg1}
             widths={[400, 800, 1200, 1800]}
             sizes="(max-width: 400px) 400w, (max-width: 800px) 800w, (max-width: 1200px) 1200w, (max-width: 1800px) 1800w"
-            decoding="sync"
-            loading="eager"
             alt="Image of wooden texture"
             class="absolute w-full h-full left-0 bottom-0 object-cover z-0"
           />
@@ -32,13 +30,11 @@ import { Picture } from "@astrojs/image/components";
           class="[box-shadow:inset_0_1.5rem_3rem_black] absolute w-full h-full left-0 top-0 z-10"
         >
         </div>
-        <div class="absolute top-0 z-0 w-full h-full brightness-[40%]">
+        <div class="absolute left-0 top-0 z-0 w-full h-full brightness-[40%]">
           <Picture
             src={bgImg1}
             widths={[400, 800, 1200, 1800]}
             sizes="(max-width: 400px) 400w, (max-width: 800px) 800w, (max-width: 1200px) 1200w, (max-width: 1800px) 1800w"
-            decoding="sync"
-            loading="eager"
             alt=""
             class="top-0 left-0 w-full h-full absolute object-cover opacity-30"
           />
@@ -47,7 +43,7 @@ import { Picture } from "@astrojs/image/components";
           <li>
             <div class="flex flex-col gap-4">
               <h2>Eco-Friendly Bruschetta</h2>
-              <p>
+              <p class="text-start opacity-70 max-sm:text-center">
                 Grilled bread topped with a mix of fresh tomatoes, garlic, and
                 basil, drizzled with a light balsamic reduction.
               </p>
@@ -56,7 +52,7 @@ import { Picture } from "@astrojs/image/components";
           <li>
             <div class="flex flex-col gap-4">
               <h2>Sustainable Salad</h2>
-              <p>
+              <p class="text-start opacity-70 max-sm:text-center">
                 A mix of seasonal greens, local vegetables, and a light,
                 flavorful dressing made from scratch.
               </p>
@@ -65,7 +61,7 @@ import { Picture } from "@astrojs/image/components";
           <li>
             <div class="flex flex-col gap-4">
               <h2>Lentil and Quinoa Bowl</h2>
-              <p>
+              <p class="text-start opacity-70 max-sm:text-center">
                 A hearty and nutritious dish featuring a blend of lentils,
                 quinoa, roasted vegetables, and a creative sauce.
               </p>
@@ -74,7 +70,7 @@ import { Picture } from "@astrojs/image/components";
           <li>
             <div class="flex flex-col gap-4">
               <h2>Roasted Chicken with a Twist</h2>
-              <p>
+              <p class="text-start opacity-70 max-sm:text-center">
                 A modern take on a classic dish, featuring locally sourced
                 chicken, a unique herb rub, and a side of seasonal roasted
                 vegetables.
@@ -84,7 +80,9 @@ import { Picture } from "@astrojs/image/components";
           <li>
             <div class="flex flex-col gap-4">
               <h2>Vegetarian Stir-Fry</h2>
-              <p>A light and flavorful dish made with a variety of seasonal</p>
+              <p class="text-start opacity-70 max-sm:text-center">
+                A light and flavorful dish made with a variety of seasonal
+              </p>
             </div>
           </li>
         </ul>
@@ -92,13 +90,11 @@ import { Picture } from "@astrojs/image/components";
     </div>
     <div class="bg-black rounded-lg overflow-hidden">
       <h1 class={`relative p-8 text-center bg-bottom`}>
-        <div class="absolute top-0 z-0 w-full h-full brightness-[40%]">
+        <div class="absolute top-0 left-0 z-0 w-full h-full brightness-[40%]">
           <Picture
             src={textureImg1}
             widths={[400, 800, 1200, 1800]}
             sizes="(max-width: 400px) 400w, (max-width: 800px) 800w, (max-width: 1200px) 1200w, (max-width: 1800px) 1800w"
-            decoding="sync"
-            loading="eager"
             alt="Image of wooden texture"
             class="absolute w-full h-full left-0 top-0 object-cover z-0"
           />
@@ -112,13 +108,11 @@ import { Picture } from "@astrojs/image/components";
           class="[box-shadow:inset_0_1.5rem_3rem_black] absolute w-full h-full left-0 top-0 z-10"
         >
         </div>
-        <div class="absolute top-0 z-0 w-full h-full brightness-[40%]">
+        <div class="absolute top-0 left-0 z-0 w-full h-full brightness-[40%]">
           <Picture
             src={bgImg3}
             widths={[400, 800, 1200, 1800]}
             sizes="(max-width: 400px) 400w, (max-width: 800px) 800w, (max-width: 1200px) 1200w, (max-width: 1800px) 1800w"
-            decoding="sync"
-            loading="eager"
             alt=""
             class="top-0 left-0 w-full h-full absolute object-cover opacity-30"
           />
@@ -127,7 +121,7 @@ import { Picture } from "@astrojs/image/components";
           <li>
             <div class="flex flex-col gap-4">
               <h2>Eco-Friendly Pizza</h2>
-              <p>
+              <p class="text-start opacity-70 max-sm:text-center">
                 A pizza made with a whole grain crust, locally sourced
                 ingredients, and a variety of creative toppings.
               </p>
@@ -136,7 +130,7 @@ import { Picture } from "@astrojs/image/components";
           <li>
             <div class="flex flex-col gap-4">
               <h2>Sustainable Fish Tacos</h2>
-              <p>
+              <p class="text-start opacity-70 max-sm:text-center">
                 Lightly fried fish served in a corn tortilla, topped with a
                 fresh, eco-conscious slaw and a drizzle of sustainable aioli.
               </p>
@@ -145,7 +139,7 @@ import { Picture } from "@astrojs/image/components";
           <li>
             <div class="flex flex-col gap-4">
               <h2>Grilled Sustainable Steak</h2>
-              <p>
+              <p class="text-start opacity-70 max-sm:text-center">
                 A locally sourced steak, grilled to perfection, served with a
                 side of seasonal roasted vegetables.
               </p>
@@ -154,7 +148,7 @@ import { Picture } from "@astrojs/image/components";
           <li>
             <div class="flex flex-col gap-4">
               <h2>Hearty Vegetable Stew</h2>
-              <p>
+              <p class="text-start opacity-70 max-sm:text-center">
                 A comforting and nutritious stew made with a variety of seasonal
                 vegetables, served with a side of crusty bread.
               </p>
@@ -163,7 +157,7 @@ import { Picture } from "@astrojs/image/components";
           <li>
             <div class="flex flex-col gap-4">
               <h2>Desert Duo</h2>
-              <p>
+              <p class="text-start opacity-70 max-sm:text-center">
                 A plate featuring a combination of locally made, eco-conscious
                 treats, such as a small scoop of ice cream and a piece of fruit
                 pie.
@@ -175,21 +169,3 @@ import { Picture } from "@astrojs/image/components";
     </div>
   </main>
 </Layout>
-
-<style>
-  h1,
-  h2,
-  h3,
-  h4 {
-    @apply font-display;
-  }
-  h1 {
-    @apply text-2xl !important;
-  }
-  h2 {
-    @apply text-3xl before:content-['"'] after:content-['"'] !important;
-  }
-  p {
-    @apply text-start opacity-70 max-sm:text-center;
-  }
-</style>
