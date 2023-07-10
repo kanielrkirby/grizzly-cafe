@@ -6,10 +6,12 @@ import image from "@astrojs/image";
 
 export default defineConfig({
   integrations: [
+    prefetch(),
     tailwind(),
     image({
       serviceEntryPoint: "@astrojs/image/sharp",
     }),
+    compress(),
   ],
   // experimental: {
   //   assets: true,

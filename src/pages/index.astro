@@ -7,7 +7,7 @@ import tileImg1 from "/src/assets/images/tile-img-1.jpg";
 import tileImg2 from "/src/assets/images/tile-img-2.jpg";
 import tileImg3 from "/src/assets/images/tile-img-3.jpg";
 import tileImg4 from "/src/assets/images/tile-img-4.jpg";
-import { Image, Picture } from "@astrojs/image/components";
+import { Picture } from "@astrojs/image/components";
 ---
 
 <Layout theme="dark" home>
@@ -153,7 +153,7 @@ import { Image, Picture } from "@astrojs/image/components";
               <div class="absolute top-0 z-0 w-full h-full brightness-[40%]">
                 <Picture
                   src={tileImg1}
-                  widths={[400, 800, 1200, 1800]}
+                  widths={[400, 800]}
                   sizes="(max-width: 400px) 400w, (max-width: 800px) 800w, (max-width: 1200px) 1200w, (max-width: 1800px) 1800w"
                   alt=""
                   class="w-full h-full object-cover rounded-md"
@@ -166,7 +166,7 @@ import { Image, Picture } from "@astrojs/image/components";
               <div class="absolute top-0 z-0 w-full h-full brightness-[40%]">
                 <Picture
                   src={tileImg2}
-                  widths={[400, 800, 1200, 1800]}
+                  widths={[400, 800]}
                   sizes="(max-width: 400px) 400w, (max-width: 800px) 800w, (max-width: 1200px) 1200w, (max-width: 1800px) 1800w"
                   alt=""
                   class="w-full h-full object-cover rounded-md"
@@ -179,7 +179,7 @@ import { Image, Picture } from "@astrojs/image/components";
               <div class="absolute top-0 z-0 w-full h-full brightness-[40%]">
                 <Picture
                   src={tileImg3}
-                  widths={[400, 800, 1200, 1800]}
+                  widths={[400, 800]}
                   sizes="(max-width: 400px) 400w, (max-width: 800px) 800w, (max-width: 1200px) 1200w, (max-width: 1800px) 1800w"
                   alt=""
                   class="w-full h-full object-cover rounded-md"
@@ -192,7 +192,7 @@ import { Image, Picture } from "@astrojs/image/components";
               <div class="absolute top-0 z-0 w-full h-full brightness-[40%]">
                 <Picture
                   src={tileImg4}
-                  widths={[400, 800, 1200, 1800]}
+                  widths={[400, 800]}
                   sizes="(max-width: 400px) 400w, (max-width: 800px) 800w, (max-width: 1200px) 1200w, (max-width: 1800px) 1800w"
                   alt=""
                   class="w-full h-full object-cover rounded-md"

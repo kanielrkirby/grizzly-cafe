@@ -1,19 +1,24 @@
 ---
-import Layout from "../src/layouts/Layout.astro";
+import { Picture } from "@astrojs/image/components";
+import Layout from "../layouts/Layout.astro";
 import bgImg4 from "/src/assets/images/bg-img-4.jpg";
-import { Image as Img } from "astro:assets";
 ---
 
 <Layout title="Our Mission" theme="dark" home>
   <main
     class="min-h-[100vh] relative flex items-center max-sm:text-center h-fit"
   >
-    <Img
-      loading="lazy"
-      alt=""
-      src={bgImg4}
-      class="w-full h-full absolute object-cover brightness-[35%] flip select-none"
-    />
+    <div class="absolute top-0 z-0 w-full h-full brightness-[40%]">
+      <Picture
+        src={bgImg4}
+        widths={[400, 800, 1200, 1800]}
+        sizes="(max-width: 400px) 400w, (max-width: 800px) 800w, (max-width: 1200px) 1200w, (max-width: 1800px) 1800w"
+        decoding="sync"
+        loading="eager"
+        alt=""
+        class="w-full h-full object-cover rounded-md"
+      />
+    </div>
     <div
       class="w-full flex flex-col gap-16 max-md:gap-8 p-24 max-sm:p-12 mb-24 top-24 max-sm:top-36 max-sm:mb-36 relative h-fit"
     >
