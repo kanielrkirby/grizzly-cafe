@@ -1,14 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import bgImg1 from "../assets/images/bg-img-1.jpg";
-// import bgImg2 from "/src/assets/images/bg-img-2.jpg";
-// import bgImg3 from "/src/assets/images/bg-img-3.jpg";
-// import tileImg1 from "/src/assets/images/tile-img-1.jpg";
-// import tileImg2 from "/src/assets/images/tile-img-2.jpg";
-// import tileImg3 from "/src/assets/images/tile-img-3.jpg";
-// import tileImg4 from "/src/assets/images/tile-img-4.jpg";
-// import { Image } from "astro:assets";
-import { Picture } from "@astrojs/image/components";
+import bgImg2 from "/src/assets/images/bg-img-2.jpg";
+import bgImg3 from "/src/assets/images/bg-img-3.jpg";
+import tileImg1 from "/src/assets/images/tile-img-1.jpg";
+import tileImg2 from "/src/assets/images/tile-img-2.jpg";
+import tileImg3 from "/src/assets/images/tile-img-3.jpg";
+import tileImg4 from "/src/assets/images/tile-img-4.jpg";
+import { Image, Picture } from "@astrojs/image/components";
 ---
 
 <Layout theme="dark" home>
@@ -130,12 +129,15 @@ import { Picture } from "@astrojs/image/components";
       </div>
       <div class="relative h-[120vh] flex justify-center items-center">
         <h2 class="z-20">Locally-grown ingredients</h2>
-        <!-- <Img
-          loading="lazy"
-          class="absolute top-0 z-0 w-full h-full object-cover brightness-[35%]"
-          src={bgImg2}
-          alt=""
-        /> -->
+        <div class="absolute top-0 z-0 w-full h-full brightness-[40%]">
+          <Picture
+            src={bgImg2}
+            widths={[400, 800, 1200, 1800]}
+            sizes="(max-width: 400px) 400w, (max-width: 800px) 800w, (max-width: 1200px) 1200w, (max-width: 1800px) 1800w"
+            alt=""
+            class="w-full h-full object-cover"
+          />
+        </div>
       </div>
       <div class="relative w-full h-full py-[10rem]">
         <div
@@ -148,42 +150,54 @@ import { Picture } from "@astrojs/image/components";
             <div
               class="w-[20rem] max-w-full aspect-video bg-black rounded-md relative flex justify-center items-center drop-shadow-md shadow-[#000000f0]"
             >
-              <!-- <Img
-                loading="lazy"
-                class="absolute w-full h-full object-cover rounded-md"
-                src={tileImg1}
-                alt=""
-              /> -->
+              <div class="absolute top-0 z-0 w-full h-full brightness-[40%]">
+                <Picture
+                  src={tileImg1}
+                  widths={[400, 800, 1200, 1800]}
+                  sizes="(max-width: 400px) 400w, (max-width: 800px) 800w, (max-width: 1200px) 1200w, (max-width: 1800px) 1800w"
+                  alt=""
+                  class="w-full h-full object-cover rounded-md"
+                />
+              </div>
             </div>
             <div
               class="w-[20rem] max-w-full aspect-video bg-black rounded-md relative flex justify-center items-center drop-shadow-md shadow-[#000000f0]"
             >
-              <!-- <Img
-                loading="lazy"
-                class="absolute w-full h-full object-cover rounded-md"
-                src={tileImg2}
-                alt=""
-              /> -->
+              <div class="absolute top-0 z-0 w-full h-full brightness-[40%]">
+                <Picture
+                  src={tileImg2}
+                  widths={[400, 800, 1200, 1800]}
+                  sizes="(max-width: 400px) 400w, (max-width: 800px) 800w, (max-width: 1200px) 1200w, (max-width: 1800px) 1800w"
+                  alt=""
+                  class="w-full h-full object-cover rounded-md"
+                />
+              </div>
             </div>
             <div
               class="w-[20rem] max-w-full aspect-video bg-black rounded-md relative flex justify-center items-center drop-shadow-md shadow-[#000000f0]"
             >
-              <!-- <Img
-                loading="lazy"
-                class="absolute w-full h-full object-cover rounded-md"
-                src={tileImg3}
-                alt=""
-              /> -->
+              <div class="absolute top-0 z-0 w-full h-full brightness-[40%]">
+                <Picture
+                  src={tileImg3}
+                  widths={[400, 800, 1200, 1800]}
+                  sizes="(max-width: 400px) 400w, (max-width: 800px) 800w, (max-width: 1200px) 1200w, (max-width: 1800px) 1800w"
+                  alt=""
+                  class="w-full h-full object-cover rounded-md"
+                />
+              </div>
             </div>
             <div
               class="w-[20rem] max-w-full aspect-video bg-orange-50 rounded-md relative flex justify-center items-center drop-shadow-md shadow-[#000000f0]"
             >
-              <!-- <Img
-                loading="lazy"
-                class="absolute w-full h-full object-cover rounded-md brightness-75"
-                src={tileImg4}
-                alt=""
-              /> -->
+              <div class="absolute top-0 z-0 w-full h-full brightness-[40%]">
+                <Picture
+                  src={tileImg4}
+                  widths={[400, 800, 1200, 1800]}
+                  sizes="(max-width: 400px) 400w, (max-width: 800px) 800w, (max-width: 1200px) 1200w, (max-width: 1800px) 1800w"
+                  alt=""
+                  class="w-full h-full object-cover rounded-md"
+                />
+              </div>
               <div class="bg-orange-200 w-full h-full absolute opacity-50">
               </div>
               <div
@@ -203,12 +217,15 @@ import { Picture } from "@astrojs/image/components";
           <span>A delicious spin</span>
           <span>on your favorite meals</span>
         </h2>
-        <!-- <Img
-          loading="lazy"
-          class="absolute top-0 z-0 w-full h-full object-cover brightness-[35%]"
-          src={bgImg3}
-          alt=""
-        /> -->
+        <div class="absolute top-0 z-0 w-full h-full brightness-[40%]">
+          <Picture
+            src={bgImg3}
+            widths={[400, 800, 1200, 1800]}
+            sizes="(max-width: 400px) 400w, (max-width: 800px) 800w, (max-width: 1200px) 1200w, (max-width: 1800px) 1800w"
+            alt=""
+            class="w-full h-full object-cover rounded-md"
+          />
+        </div>
       </div>
     </div>
   </main>
