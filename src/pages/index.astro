@@ -10,7 +10,21 @@ import tileImg4 from "/src/assets/images/tile-img-4.jpg";
 import { Picture } from "@astrojs/image/components";
 ---
 
-<Layout home theme="dark">
+<Layout
+  home
+  theme="dark"
+  SEO={{
+    description:
+      "The Grizzly Cafe is the hub of Southern Illinois. Featuring a customized vegetarian menu, we offer catering and delivery for any kind of gathering.",
+    openGraph: {
+      basic: {
+        title: "The Grizzly Cafe - The Hub of Southern Illinois",
+        image: bgImg1.src,
+        type: "website",
+      },
+    },
+  }}
+>
   <main class="top-0 w-full h-full text-center">
     <div class="relative top-0 flex flex-col w-full">
       <div

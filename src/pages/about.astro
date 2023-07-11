@@ -4,7 +4,22 @@ import Layout from "../layouts/Layout.astro";
 import bgImg4 from "/src/assets/images/bg-img-4.jpg";
 ---
 
-<Layout title="Our Mission" home theme="dark">
+<Layout
+  home
+  theme="dark"
+  SEO={{
+    title: "Our Mission",
+    description:
+      "We are committed to offering delicious, eco-friendly alternatives that connect the tight-knit community we have built in Southern Illinois.",
+    openGraph: {
+      basic: {
+        title: "The Grizzly Cafe's Mission",
+        image: bgImg4.src,
+        type: "website",
+      },
+    },
+  }}
+>
   <main
     class="min-h-[100vh] relative flex items-center max-sm:text-center h-fit"
   >

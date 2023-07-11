@@ -1,12 +1,26 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import bgImg1 from "/src/assets/images/bg-img-1.jpg";
+import tileImg1 from "/src/assets/images/tile-img-1.jpg";
 import textureImg1 from "/src/assets/images/texture-img-1.jpg";
 import bgImg3 from "/src/assets/images/bg-img-3.jpg";
 import { Picture } from "@astrojs/image/components";
 ---
 
-<Layout title="Menu">
+<Layout
+  SEO={{
+    title: "Menu",
+    description:
+      "See our extensive, eco-friendly menu, including the lentil and quinoa bowl, vegetarian stir-fry, and hearty vegetable stew.",
+    openGraph: {
+      basic: {
+        title: "The Grizzly Cafe Menu - Southern Illinois",
+        image: tileImg1.src,
+        type: "website",
+      },
+    },
+  }}
+>
   <main
     class="overflow-y-hidden w-full flex justify-around text-white gap-4 p-4 max-lg:flex-col max-sm:text-center"
   >

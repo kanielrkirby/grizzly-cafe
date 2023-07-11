@@ -2,14 +2,15 @@
 import Footer from "../components/Footer.astro";
 import Nav from "../components/Nav.astro";
 import Loading from "../components/Loading.astro";
+import { SEO, Props as SEOProps } from "astro-seo";
 
 export interface Props {
-  title?: string;
   home?: boolean;
   theme?: "light" | "dark";
+  SEO?: SEOProps;
 }
 
-const { title, home, theme } = Astro.props;
+const { home, theme, SEO: seoProps } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -21,11 +22,14 @@ const { title, home, theme } = Astro.props;
 >
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title ? title + " | " : ""}Grizzly Cafe</title>
+    <SEO
+      {...seoProps}
+      titleTemplate="%s | Grizzly Cafe"
+      titleDefault="Grizzly Cafe"
+    />
   </head>
   <body class="h-full">
     <header></header>
@@ -33,39 +37,38 @@ const { title, home, theme } = Astro.props;
     <slot />
     <Footer />
     <Loading />
+    <style is:global>
+      @font-face {
+        font-family: "Eagle Lake";
+        src: url("/src/assets/fonts/Eagle_Lake/EagleLake-Regular.ttf")
+          format("truetype");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Noto Sans";
+        src: url("/src/assets/fonts/Noto_Sans/NotoSans-Regular.ttf")
+          format("truetype");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+      * {
+        @apply font-display;
+      }
+      h1 {
+        @apply text-4xl !important;
+      }
+      h2 {
+        @apply text-3xl !important;
+      }
+      h3 {
+        @apply text-2xl !important;
+      }
+      html.loading {
+        @apply overflow-hidden;
+      }
+    </style>
   </body>
 </html>
-
-<style is:global>
-  @font-face {
-    font-family: "Eagle Lake";
-    src: url("/src/assets/fonts/Eagle_Lake/EagleLake-Regular.ttf")
-      format("truetype");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Noto Sans";
-    src: url("/src/assets/fonts/Noto_Sans/NotoSans-Regular.ttf")
-      format("truetype");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-  * {
-    @apply font-display;
-  }
-  h1 {
-    @apply text-4xl !important;
-  }
-  h2 {
-    @apply text-3xl !important;
-  }
-  h3 {
-    @apply text-2xl !important;
-  }
-  html.loading {
-    @apply overflow-hidden;
-  }
-</style>
