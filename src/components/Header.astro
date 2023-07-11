@@ -20,9 +20,9 @@ const pathname = new URL(Astro.request.url).pathname.slice(1);
     <ul class="hidden gap-4 md:flex text-xl">
       <li>
         <a
-          class={`${
-            pathname === "" ? "active" : ""
-          } after:bg-black dark:after:bg-white`}
+          class={`${pathname === "" ? "active" : ""} ${
+            theme === "dark" ? "after:bg-white" : "after:bg-black"
+          }`}
           href="/"
           rel="prefetch">Home</a
         >
@@ -30,9 +30,9 @@ const pathname = new URL(Astro.request.url).pathname.slice(1);
       <li>|</li>
       <li>
         <a
-          class={`${
-            pathname === "menu" ? "active" : ""
-          } after:bg-black dark:after:bg-white`}
+          class={`${pathname === "menu" ? "active" : ""} ${
+            theme === "dark" ? "after:bg-white" : "after:bg-black"
+          }`}
           href="/menu"
           rel="prefetch">Menu</a
         >
@@ -40,9 +40,9 @@ const pathname = new URL(Astro.request.url).pathname.slice(1);
       <li>|</li>
       <li>
         <a
-          class={`${
-            pathname === "about" ? "active" : ""
-          } after:bg-black dark:after:bg-white`}
+          class={`${pathname === "about" ? "active" : ""} ${
+            theme === "dark" ? "after:bg-white" : "after:bg-black"
+          }`}
           href="/about"
           rel="prefetch">About</a
         >
@@ -58,7 +58,7 @@ const pathname = new URL(Astro.request.url).pathname.slice(1);
 </header>
 <style>
   a {
-    @apply relative after:absolute after:bottom-0 after:left-0 after:right-0 after:m-auto after:h-1 after:w-0 after:rounded hover:text-blue-500 hover:underline;
+    @apply relative after:absolute after:bottom-0 after:left-0 after:right-0 after:m-auto after:h-1 after:w-0 after:rounded hover:text-blue-500 hover:after:bg-blue-500;
   }
 
   a.active {

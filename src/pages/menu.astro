@@ -11,26 +11,28 @@ import { Picture } from "@astrojs/image/components";
     class="overflow-y-hidden w-full flex justify-around text-white gap-4 p-4 max-lg:flex-col max-sm:text-center"
   >
     <div class="bg-black rounded-lg overflow-hidden">
-      <h1 class={`relative p-8 text-center bg-top`}>
-        <div class="absolute left-0 top-0 z-0 w-full h-full brightness-[40%]">
+      <h1 class="relative p-8 text-center bg-top">
+        <div class="absolute left-0 top-0 z-10 w-full h-full brightness-[40%]">
           <Picture
             src={textureImg1}
-            widths={[400, 800, 1200, 1800]}
-            sizes="(max-width: 400px) 400w, (max-width: 800px) 800w, (max-width: 1200px) 1200w, (max-width: 1800px) 1800w"
-            alt="Image of wooden texture"
+            widths={[400, 800, 1200]}
+            sizes="(max-width: 400px) 400w, (max-width: 800px) 800w, (max-width: 1200px) 1200w"
+            alt=""
             class="absolute w-full h-full left-0 bottom-0 object-cover z-0"
           />
         </div>
-        <span class="z-10 relative">Our specialties</span>
-        <div class="bg-black w-full h-full absolute opacity-50 left-0 top-0">
+        <span class="z-20 relative">Our specialties</span>
+        <div
+          class="bg-black w-full h-full absolute opacity-50 left-0 top-0 z-10"
+        >
         </div>
       </h1>
-      <div class="px-12 py-8 shadow-inner relative">
+      <div class="px-12 py-8 shadow-inner relative h-full">
         <div
           class="[box-shadow:inset_0_1.5rem_3rem_black] absolute w-full h-full left-0 top-0 z-10"
         >
         </div>
-        <div class="absolute left-0 top-0 z-0 w-full h-full brightness-[40%]">
+        <div class="absolute left-0 top-0 z-0 w-full h-full">
           <Picture
             src={bgImg1}
             widths={[400, 800, 1200, 1800]}
@@ -89,18 +91,20 @@ import { Picture } from "@astrojs/image/components";
       </div>
     </div>
     <div class="bg-black rounded-lg overflow-hidden">
-      <h1 class={`relative p-8 text-center bg-bottom`}>
+      <h1 class="relative p-8 text-center bg-bottom">
         <div class="absolute top-0 left-0 z-0 w-full h-full brightness-[40%]">
           <Picture
             src={textureImg1}
-            widths={[400, 800, 1200, 1800]}
-            sizes="(max-width: 400px) 400w, (max-width: 800px) 800w, (max-width: 1200px) 1200w, (max-width: 1800px) 1800w"
-            alt="Image of wooden texture"
+            widths={[400, 800, 1200]}
+            sizes="(max-width: 400px) 400w, (max-width: 800px) 800w, (max-width: 1200px) 1200w"
+            alt=""
             class="absolute w-full h-full left-0 top-0 object-cover z-0"
           />
         </div>
-        <span class="z-10 relative">Recommended</span>
-        <div class="bg-black w-full h-full absolute opacity-60 left-0 top-0">
+        <span class="z-20 relative">Recommended</span>
+        <div
+          class="bg-black w-full h-full absolute opacity-50 left-0 top-0 z-10"
+        >
         </div>
       </h1>
       <div class="px-12 py-8 shadow-inner relative h-full">
@@ -108,7 +112,7 @@ import { Picture } from "@astrojs/image/components";
           class="[box-shadow:inset_0_1.5rem_3rem_black] absolute w-full h-full left-0 top-0 z-10"
         >
         </div>
-        <div class="absolute top-0 left-0 z-0 w-full h-full brightness-[40%]">
+        <div class="absolute top-0 left-0 z-0 w-full h-full brightness-[50%]">
           <Picture
             src={bgImg3}
             widths={[400, 800, 1200, 1800]}
