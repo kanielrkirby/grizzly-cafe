@@ -25,6 +25,7 @@ import { Picture } from "@astrojs/image/components";
             src={bgImg1}
             widths={[400, 800, 1200, 1800]}
             sizes="(max-width: 400px) 400w, (max-width: 800px) 800w, (max-width: 1200px) 1200w, (max-width: 1800px) 1800w"
+            aspectRatio={bgImg1.width / bgImg1.height}
             decoding="sync"
             loading="eager"
             alt=""
