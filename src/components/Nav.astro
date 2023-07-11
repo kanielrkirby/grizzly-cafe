@@ -25,7 +25,7 @@ const pathname = new URL(Astro.request.url).pathname.slice(1);
         rel="prefetch">Home</a
       >
     </li>
-    <span>|</span>
+    <li>|</li>
     <li>
       <a
         class={`${pathname === "menu" ? "active" : ""} ${
@@ -35,7 +35,7 @@ const pathname = new URL(Astro.request.url).pathname.slice(1);
         rel="prefetch">Menu</a
       >
     </li>
-    <span>|</span>
+    <li>|</li>
     <li>
       <a
         class={`${pathname === "about" ? "active" : ""} ${
