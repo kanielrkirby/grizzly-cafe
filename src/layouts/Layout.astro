@@ -1,6 +1,6 @@
 ---
 import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
+import Nav from "../components/Nav.astro";
 import Loading from "../components/Loading.astro";
 
 export interface Props {
@@ -28,10 +28,11 @@ const { title, home, theme } = Astro.props;
     <title>{title ? title + " | " : ""}Grizzly Cafe</title>
   </head>
   <body class="h-full">
-    <Loading />
-    <Header home={home} theme={theme} />
+    <header></header>
+    <Nav home={home} theme={theme} />
     <slot />
     <Footer />
+    <Loading />
   </body>
 </html>
 

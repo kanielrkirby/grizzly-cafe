@@ -1,0 +1,49 @@
+<div
+  class="fixed opacity-0 nav-screen w-full h-full transition-all backdrop-blur-md text-black duration-500 ease-in-out z-40 flex justify-center items-center overflow-hidden"
+>
+  <div
+    class="absolute w-full h-full z-40 bg-black opacity-50"
+    id="nav-card-backdrop"
+  >
+  </div>
+  <nav
+    class="nav-card rounded-md z-50 bg-white p-24 transition-all duration-200 flex-col flex gap-4"
+  >
+    <h2 class="text-center text-3xl mb-12">Pages</h2>
+    <a class="block bg-orange-50 rounded-md px-8 py-4 shadow-lg" href="/"
+      >Home</a
+    >
+    <a class="block bg-red-50 rounded-md px-8 py-4 shadow-lg" href="/menu"
+      >Menu</a
+    >
+    <a class="block rounded-md px-8 py-4 shadow-lg bg-orange-50" href="/about"
+      >About</a
+    >
+  </nav>
+</div>
+
+<style>
+  html .nav-screen {
+    @apply pointer-events-none -z-10;
+  }
+  html.nav-card-open .nav-screen {
+    @apply pointer-events-auto z-50 opacity-100;
+  }
+  html .nav-card {
+    @apply -translate-y-full;
+  }
+  html.nav-card-open .nav-card {
+    @apply translate-y-0;
+  }
+  html.nav-card-open {
+    @apply overflow-y-hidden;
+  }
+</style>
+
+<script>
+  document
+    .querySelector("#nav-card-backdrop")!
+    .addEventListener("click", () =>
+      document.documentElement.classList.toggle("nav-card-open")
+    );
+</script>

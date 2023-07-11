@@ -8,19 +8,8 @@ import bgImg4 from "/src/assets/images/bg-img-4.jpg";
   <main
     class="min-h-[100vh] relative flex items-center max-sm:text-center h-fit"
   >
-    <div class="absolute top-0 z-0 w-full h-full brightness-[40%]">
-      <Picture
-        src={bgImg4}
-        widths={[400, 800, 1200, 1800]}
-        sizes="(max-width: 400px) 400w, (max-width: 800px) 800w, (max-width: 1200px) 1200w, (max-width: 1800px) 1800w"
-        decoding="sync"
-        loading="eager"
-        alt=""
-        class="w-full h-full object-cover"
-      />
-    </div>
     <div
-      class="w-full flex flex-col gap-16 max-md:gap-8 p-24 max-sm:p-12 mb-24 top-24 max-sm:top-36 max-sm:mb-36 relative h-fit"
+      class="w-full flex flex-col gap-16 max-md:gap-8 p-24 max-sm:p-12 mb-24 top-24 max-sm:top-36 max-sm:mb-36 relative h-fit z-10"
     >
       <h1 class="text-4xl z-10">Our Mission</h1>
       <div class="flex flex-col gap-8 max-md:gap-4">
@@ -46,6 +35,17 @@ import bgImg4 from "/src/assets/images/bg-img-4.jpg";
           the environment and inspire others to make eco-conscious choices.
         </p>
       </div>
+    </div>
+    <div class="absolute top-0 z-0 w-full h-full brightness-[40%]">
+      <Picture
+        src={bgImg4}
+        widths={[400, 800, 1200, 1800]}
+        sizes="(max-width: 400px) 400w, (max-width: 800px) 800w, (max-width: 1200px) 1200w, (max-width: 1800px) 1800w"
+        decoding="sync"
+        loading="eager"
+        alt=""
+        class="w-full h-full object-cover"
+      />
     </div>
   </main>
 </Layout>

@@ -1,76 +1,80 @@
-<div
-  class="fixed opacity-0 nav-screen w-full h-full transition-all backdrop-blur-md text-black duration-500 ease-in-out z-40 flex justify-center items-center overflow-hidden"
+---
+import Logo from "./Logo.astro";
+import MobileNav from "./MobileNav.astro";
+export interface Props {
+  home?: boolean;
+  theme?: "light" | "dark";
+}
+const { home, theme } = Astro.props;
+const pathname = new URL(Astro.request.url).pathname.slice(1);
+---
+
+<nav
+  class={`flex items-center absolute right-0 z-20 top-0 w-full left-0 overflow-hidden md:justify-between justify-around px-8 py-4 ${
+    home ? "absolute" : "relative"
+  } ${theme === "dark" ? "text-white fill-white" : "text-black fill-black"}`}
 >
-  <div
-    class="absolute w-full h-full z-40 bg-black opacity-50"
-    id="nav-card-backdrop"
+  <Logo theme={theme} />
+  <ul class="hidden gap-4 md:flex text-xl">
+    <li>
+      <a
+        class={`${pathname === "" ? "active" : ""} ${
+          theme === "dark" ? "after:bg-white" : "after:bg-black"
+        }`}
+        href="/"
+        rel="prefetch">Home</a
+      >
+    </li>
+    <span>|</span>
+    <li>
+      <a
+        class={`${pathname === "menu" ? "active" : ""} ${
+          theme === "dark" ? "after:bg-white" : "after:bg-black"
+        }`}
+        href="/menu"
+        rel="prefetch">Menu</a
+      >
+    </li>
+    <span>|</span>
+    <li>
+      <a
+        class={`${pathname === "about" ? "active" : ""} ${
+          theme === "dark" ? "after:bg-white" : "after:bg-black"
+        }`}
+        href="/about"
+        rel="prefetch">About</a
+      >
+    </li>
+  </ul>
+  <button
+    class="rotate-90 absolute right-8 top-8 md:hidden dark:text-white block text-5xl cursor-pointer select-none hover:scale-105 transition-all duration-200"
+    id="nav-card-button"
   >
-  </div>
-  <nav
-    class="nav-card rounded-md z-50 bg-white p-24 transition-all duration-200"
-  >
-    <h2 class="text-center text-3xl mb-12">Pages</h2>
-    <ul class="flex-col flex gap-4">
-      <li class="bg-orange-50">
-        <a class="block rounded-md px-8 py-4 shadow-lg brightness-90" href="/"
-          >Home</a
-        >
-      </li>
-      <li class="bg-red-50">
-        <a
-          class="block rounded-md px-8 py-4 shadow-lg brightness-90"
-          href="/menu">Menu</a
-        >
-      </li>
-      <li class="bg-orange-50">
-        <a
-          class="block rounded-md px-8 py-4 shadow-lg brightness-90"
-          href="/about">About</a
-        >
-      </li>
-    </ul>
-  </nav>
-</div>
+    |||
+  </button>
+</nav>
+<MobileNav />
 
 <style>
-  /* html .nav-screen {
-    @apply pointer-events-none -z-10;
+  a {
+    @apply relative after:absolute after:bottom-0 after:left-0 after:right-0 after:m-auto after:h-1 after:w-0 after:rounded hover:text-blue-500 hover:after:bg-blue-500;
   }
-  html.nav-card-open .nav-screen {
-    @apply pointer-events-auto z-50 opacity-100;
+
+  a.active {
+    @apply after:w-auto;
   }
-  html .nav-card {
-    @apply -translate-y-full;
-  }
-  html.nav-card-open .nav-card {
-    @apply translate-y-0;
-  }
-  html.nav-card-open {
-    @apply overflow-y-hidden;
-  } */
-  html {
-    .nav-screen {
-      @apply pointer-events-none -z-10;
-    }
-    .nav-card {
-      @apply -translate-y-full;
-    }
-    &.nav-card-open {
-      @apply overflow-y-hidden;
-      .nav-screen {
-        @apply pointer-events-auto z-50 opacity-100;
-      }
-      .nav-card {
-        @apply translate-y-0;
-      }
-    }
+
+  img:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
   }
 </style>
 
 <script>
-  document
-    .querySelector("#nav-card-backdrop")!
-    .addEventListener("click", () =>
-      document.documentElement.classList.toggle("nav-card-open")
-    );
+  const btn = document.querySelector("#nav-card-button")!;
+  btn.addEventListener("click", () => {
+    document.documentElement.classList.toggle("nav-card-open");
+  });
 </script>

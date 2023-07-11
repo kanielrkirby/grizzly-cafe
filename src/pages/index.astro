@@ -41,81 +41,69 @@ import { Picture } from "@astrojs/image/components";
             id="emailjs-form-reservation"
             class="flex flex-col gap-8 items-center"
           >
-            <ul class="flex flex-col gap-1 w-full">
-              <li class="w-full">
-                <div
-                  class="gap-4 w-full flex justify-between p-4 bg-orange-50 max-lg:flex-col"
-                >
-                  <label for="input-amount">For how many?</label>
-                  <input
-                    id="input-amount"
-                    class="font-body py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
-                    type="number"
-                    value="1"
-                    min="1"
-                    required
-                    name="amount"
-                  />
-                </div>
-              </li>
-              <li class="w-full">
-                <div
-                  class="gap-4 w-full flex justify-between p-4 bg-orange-100 max-lg:flex-col"
-                >
-                  <label for="input-name">Your name?</label>
-                  <input
-                    id="input-name"
-                    class="font-body py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
-                    type="text"
-                    minlength="2"
-                    required
-                    name="name"
-                  />
-                </div>
-              </li>
-              <li class="w-full">
-                <div
-                  class="gap-4 w-full flex justify-between p-4 bg-orange-50 max-lg:flex-col"
-                >
-                  <label for="input-time">What time would you prefer?</label>
-                  <input
-                    id="input-time"
-                    class="font-body py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
-                    type="time"
-                    required
-                    name="time"
-                  />
-                </div>
-              </li>
-              <li class="w-full">
-                <div
-                  class="gap-4 w-full flex justify-between p-4 bg-orange-100 max-lg:flex-col"
-                >
-                  <label for="input-number">Your phone number?</label>
-                  <input
-                    id="input-number"
-                    class="font-body py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
-                    type="tel"
-                    required
-                    name="number"
-                  />
-                </div>
-              </li>
-              <li class="w-full">
-                <div
-                  class="gap-4 w-full flex justify-between p-4 bg-orange-50 max-lg:flex-col"
-                >
-                  <label for="input-email">Your email?</label>
-                  <input
-                    id="input-email"
-                    class="font-body py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
-                    type="email"
-                    required
-                    name="email"
-                  />
-                </div>
-              </li>
-            </ul>
+            <div
+              class="gap-4 w-full flex justify-between p-4 bg-orange-50 max-lg:flex-col"
+            >
+              <label for="input-amount">For how many?</label>
+              <input
+                id="input-amount"
+                class="font-body py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
+                type="number"
+                value="1"
+                min="1"
+                required
+                name="amount"
+              />
+            </div>
+            <div
+              class="gap-4 w-full flex justify-between p-4 bg-orange-100 max-lg:flex-col"
+            >
+              <label for="input-name">Your name?</label>
+              <input
+                id="input-name"
+                class="font-body py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
+                type="text"
+                minlength="2"
+                required
+                name="name"
+              />
+            </div>
+            <div
+              class="gap-4 w-full flex justify-between p-4 bg-orange-50 max-lg:flex-col"
+            >
+              <label for="input-time">What time would you prefer?</label>
+              <input
+                id="input-time"
+                class="font-body py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
+                type="time"
+                required
+                name="time"
+              />
+            </div>
+            <div
+              class="gap-4 w-full flex justify-between p-4 bg-orange-100 max-lg:flex-col"
+            >
+              <label for="input-number">Your phone number?</label>
+              <input
+                id="input-number"
+                class="font-body py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
+                type="tel"
+                required
+                name="number"
+              />
+            </div>
+            <div
+              class="gap-4 w-full flex justify-between p-4 bg-orange-50 max-lg:flex-col"
+            >
+              <label for="input-email">Your email?</label>
+              <input
+                id="input-email"
+                class="font-body py-1 px-3 focus:outline-none focus:shadow-lg hover:shadow-lg shadow-red-500 transition-all duration-200"
+                type="email"
+                required
+                name="email"
+              />
+            </div>
             <button
               type="submit"
               class="border-[2px] border-black px-2 py-3 rounded-md text-2xl w-fit cursor-pointer hover:scale-105 transition-all duration-200 select-none"
@@ -150,7 +138,7 @@ import { Picture } from "@astrojs/image/components";
             <div
               class="w-[20rem] max-w-full aspect-video bg-black rounded-md relative flex justify-center items-center drop-shadow-md shadow-[#000000f0]"
             >
-              <h4 class="z-10 text-white">Soups</h4>
+              <h4 class="z-10 text-xl text-white">Soups</h4>
               <div class="absolute top-0 z-0 w-full h-full brightness-[40%]">
                 <Picture
                   src={tileImg1}
@@ -164,7 +152,7 @@ import { Picture } from "@astrojs/image/components";
             <div
               class="w-[20rem] max-w-full aspect-video bg-black rounded-md relative flex justify-center items-center drop-shadow-md shadow-[#000000f0]"
             >
-              <h4 class="z-10 text-white">Teas</h4>
+              <h4 class="z-10 text-xl text-white">Teas</h4>
               <div class="absolute top-0 z-0 w-full h-full brightness-[40%]">
                 <Picture
                   src={tileImg2}
@@ -178,7 +166,7 @@ import { Picture } from "@astrojs/image/components";
             <div
               class="w-[20rem] max-w-full aspect-video bg-black rounded-md relative flex justify-center items-center drop-shadow-md shadow-[#000000f0]"
             >
-              <h4 class="z-10 text-white">Sandwiches</h4>
+              <h4 class="z-10 text-xl text-white">Sandwiches</h4>
               <div class="absolute top-0 z-0 w-full h-full brightness-[40%]">
                 <Picture
                   src={tileImg3}
@@ -203,7 +191,7 @@ import { Picture } from "@astrojs/image/components";
               </div>
               <div class="bg-orange-200 w-full h-full absolute opacity-50">
               </div>
-              <h4 class="z-10 flex flex-col gap-2">
+              <h4 class="z-10 text-xl flex flex-col gap-2">
                 <span>Give us a call!</span>
                 <span>(555) 123-4567</span>
               </h4>
