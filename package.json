@@ -14,14 +14,15 @@
     "@astrojs/prefetch": "^0.2.3",
     "@astrojs/tailwind": "^4.0.0",
     "@emailjs/browser": "^3.11.0",
+    "@swup/astro": "^1.0.2",
     "astro": "^2.7.3",
     "astro-compress": "^1.1.49",
     "astro-seo": "^0.7.5",
     "tailwindcss": "^3.0.24"
   },
   "devDependencies": {
+    "@prettier/plugin-xml": "^2.2.0",
     "prettier": "^2.8.8",
-    "prettier-plugin-tailwindcss": "^0.3.0",
-    "@prettier/plugin-xml": "^2.2.0"
+    "prettier-plugin-tailwindcss": "^0.3.0"
   }
 }
